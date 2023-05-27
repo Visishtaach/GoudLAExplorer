@@ -1,0 +1,38 @@
+.darkTitle,
+.darkTitle > a {
+  color: #888888 !important;
+  font-family: 'Poppins';
+  padding-right: '20px';
+}
+
+.lightTitle,
+.lightTitle > a {
+  color:#595968;
+  font-family: 'Poppins';
+  padding-right: '20px';
+
+}
+
+
+.lightToggleButton {
+    color: #595968;
+    border-color: black;
+  }
+  
+  .darkToggleButton {
+    color: white;
+    border-color: white;
+    /* -webkit-text-fill-color: beige; */
+  }
+
+  .dropdown-toggle::after {
+    display: none !important; 
+  }
+
+
+  .activeNavDropdown,
+  .activeNavDropdown > span {
+    color: red; /* Set the desired font color for the active NavDropdown item and its title */
+    /* Add any other desired styles */
+  }
+  
