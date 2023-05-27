@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { ThemeContext } from "../../themecontext/ThemeContext";
 import { Row, Col, Button, ListGroup, ProgressBar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-
+import Table from "react-bootstrap/Table";
 const Lists = () => {
   const { theme } = useContext(ThemeContext);
   const [showList1, setShowList1] = useState(true);
@@ -105,6 +105,115 @@ const Lists = () => {
           boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
         }}
       >
+        <Row lg={12}>
+          <Col>
+            <Table responsive>
+              <tbody>
+                {list1Items.map((item) => (
+                  <tr style={{borderColor: theme === "light"?'gray':'rgba(37,64,110,1)'}}>
+                    <td>
+                      <div
+                        className="p-4 text-center"
+                        style={{
+                          backgroundColor: "rgba(22,22,63,1)",
+                          color: "white",
+                          fontWeight: "bold",
+                          borderRadius: "10px",
+                          boxShadow: "0 2px 4px rgba(0, 0, 0, 0.6)",
+                        }}
+                      >
+                        {item.id}
+                      </div>
+                    </td>
+                    <td>
+                      <div className="d-flex flex-column"
+                        style={{
+                          color:
+                            theme === "light"
+                              ? "rgba(0,0,21,1)"
+                              : "rgba(255,255,255,1)",
+                          fontSize: "19px",
+                          fontFamily: "Poppins",
+                          // backgroundColor:'red',
+                        }}
+                      >
+                        {item.name}
+                        <span
+                        style={{
+                          color: "rgba(48,197,244,1)",
+                          fontSize: "13px",
+                          fontFamily: "Poppins",
+                        }}
+                      >
+                        {item.description}
+                      </span>
+                      </div>
+                     
+                    </td>
+                    {/* <td>{item.description}</td> */}
+                    <td align="left">
+                      {" "}
+                     <Row lg={12}>
+                     <div>
+                        <ProgressBar
+                          now={item.progress}
+                          label={`${item.progress}%`}
+                          variant={item.variant}
+                          style={{
+                            height: "46px",
+                            width:'400px',
+                            color: "pink",
+                            borderRadius: "10px",
+                            border: "1px solid #4AA4DC",
+                            backgroundColor:
+                              theme === "light" ? "white" : "#16163F",
+                          }}
+                          className="custom-progress-bar"
+                        />
+                      </div>
+                     </Row>
+                    </td>
+                    <td align="right">
+                      <Button
+                        style={{
+                          fontFamily: "Poppins",
+                          backgroundColor: "#8063AC",
+                          border: "none",
+                          width: "84px",
+                          height: "46px",
+                          fontSize: "21px",
+                          // display:'flex',
+                          // justifyContent:'flex-end',
+                          // alignItems:'center'
+                        }}
+                      >
+                        Vote
+                      </Button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
+          </Col>
+        </Row>
+      </div>
+    </>
+  );
+};
+
+export default Lists;
+
+/* <div
+        className="container mt-4"
+        style={{
+          padding: "20px",
+          backgroundColor: theme === "light" ? "white" : "rgb(0, 0, 51)",
+          borderRadius: "15px",
+          color: theme === "light" ? "black" : "white",
+          height: "auto",
+          boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
+        }}
+      >
         <div
       
           style={{
@@ -155,15 +264,12 @@ const Lists = () => {
                       <Col xs={12} sm={1} className="mt-3 mt-sm-0">
                         <div
                           style={{
-                            width: "76px",
-                            height: "76px",
+                            // width: "76px",
+                            // height: "76px",
                             backgroundColor: "rgba(22,22,63,1)",
                             color: "white",
                             fontWeight: "bold",
-                            textAlign: "center",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
+                            
                             borderRadius: "10px",
                             boxShadow: "0 2px 4px rgba(0, 0, 0, 0.6)",
                           }}
@@ -378,9 +484,4 @@ const Lists = () => {
             </Col>
           </Row>
         )}
-      </div>
-    </>
-  );
-};
-
-export default Lists;
+      </div> */
