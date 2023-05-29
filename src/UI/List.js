@@ -5,7 +5,7 @@ import { ThemeContext } from "../themecontext/ThemeContext";
 
 
 const List = ({ activeNodes }) => {
-  const theme = useContext(ThemeContext);
+  const {theme} = useContext(ThemeContext);
   return (
     <div className="table-responsive pt-5">
       <table

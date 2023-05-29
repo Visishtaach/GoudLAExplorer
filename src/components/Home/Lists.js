@@ -101,17 +101,46 @@ const Lists = () => {
           backgroundColor: theme === "light" ? "white" : "rgb(0, 0, 51)",
           borderRadius: "15px",
           color: theme === "light" ? "black" : "white",
-          height: "auto",
+          // height: "auto",
           boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
         }}
       >
-        <Row lg={12}>
+      <div className="m-4"
+        style={{
+        textAlign: "left",
+        display: "inline-flex",
+        borderRadius: "10px",
+        border:
+          theme === "light"
+            ? "1px solid  rgba(235,235,235,1)"
+            : "1px solid rgba(22,22,63,1)",
+        
+      }}
+    >
+      <NavLink
+        to="/"
+        variant="secondary"
+        onClick={handleButtonClick1}
+        style={tab1 ? style1 : style2}
+      >
+        Active Proposals
+      </NavLink>
+
+      <NavLink
+        variant="light"
+        onClick={handleButtonClick2}
+        style={tab2 ? style1 : style2}
+      >
+        InActive Proposals
+      </NavLink>
+    </div>
+        <Row lg={12} m={5}>
           <Col>
             <Table responsive>
               <tbody>
                 {list1Items.map((item) => (
-                  <tr style={{borderColor: theme === "light"?'gray':'rgba(37,64,110,1)'}}>
-                    <td>
+                  <tr style={{borderColor: theme === "light"?'rgb(235, 235, 235)':'rgba(37,64,110,1)'}}>
+                    <td style={{paddingBottom:'10px'}}>
                       <div
                         className="p-4 text-center"
                         style={{
@@ -182,9 +211,7 @@ const Lists = () => {
                           width: "84px",
                           height: "46px",
                           fontSize: "21px",
-                          // display:'flex',
-                          // justifyContent:'flex-end',
-                          // alignItems:'center'
+                          
                         }}
                       >
                         Vote

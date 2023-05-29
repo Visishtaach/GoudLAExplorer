@@ -491,10 +491,10 @@ const Details = () => {
                     color: "rgba(127,127,152,1)",
                   }}
                 >
-                  Latest Block (Height)
+                  Latest Block(Height)
                 </div>
-                <div>
-                  <div
+                {/* <div> */}
+                  <span
                     style={{
                       fontFamily: "Avenir",
                       fontSize: "16px",
@@ -506,7 +506,7 @@ const Details = () => {
                     }}
                   >
                     24517698
-                  </div>{" "}
+                  </span>{" "}
                   <div
                     style={{
                       fontFamily: "Avenir",
@@ -515,18 +515,10 @@ const Details = () => {
                       fontStyle: "normal",
                     }}
                   >
-                    (12,989,113,
+                    (12,989,113,Goud)
                   </div>
-                  <div
-                    style={{
-                      fontFamily: "Poppins",
-                      fontSize: "14px",
-                      color: "rgba(127,127,152,1)",
-                    }}
-                  >
-                    Goud)
-                  </div>
-                </div>
+                  
+                {/* </div> */}
               </div>
             </div>
           </Col>

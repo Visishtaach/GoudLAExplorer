@@ -46,8 +46,8 @@ const Header = () => {
 
   return (
     <>
-      {/* <Container> */}
-      <div className="container">
+      <Container>
+      {/* <div> */}
         {" "}
         {["md"].map((expand) => (
           <Navbar key={expand} style={navbarStyle} expand="lg">
@@ -106,7 +106,7 @@ const Header = () => {
                       <NavDropdown.Item href="pending-transactions">
                         Pending Transactions
                       </NavDropdown.Item>
-                      <NavDropdown.Item href="blocks">
+                      <NavDropdown.Item href="view-blocks">
                         View Blocks
                       </NavDropdown.Item>
                       <NavDropdown.Divider />
@@ -206,8 +206,8 @@ const Header = () => {
             </Container>
           </Navbar>
         ))}
-      {/* </Container> */}
-      </div>
+      </Container>
+      {/* </div> */}
     </>
   );
 };

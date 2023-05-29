@@ -73,7 +73,7 @@ const Main = () => {
                             theme === "dark"
                               ? "2px solid rgba(128,99,172,1)"
                               : "none",
-                          borderRadius: "8px",
+                          borderRadius: "10px",
                         }}
                       >
                         <Form.Control

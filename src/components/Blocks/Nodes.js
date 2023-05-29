@@ -11,7 +11,7 @@ import group from "../../assets/Blocks/group.svg";
 import logo from "../../assets/Blocks/Ellipse 124.svg";
 
 const Nodes = () => {
-  const theme = useContext(ThemeContext);
+  const {theme} = useContext(ThemeContext);
   const [activeNodes, setActiveNodes] = useState(true);
 
   const style1 = {
@@ -43,7 +43,7 @@ const Nodes = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container-sm">
       <Header />
       <SearchField />
       {/* <Footer/> */}
@@ -121,6 +121,7 @@ const Nodes = () => {
         {/* rendering list */}
         <List activeNodes={activeNodesList} />
       </div>
+      <Footer/>
     </div>
   );
 };

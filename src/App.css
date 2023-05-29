@@ -1,5 +1,19 @@
 .custom-input:focus {
   box-shadow: none !important;
   border-color: rgba(128, 99, 172, 1) !important;
+  border-radius: 5px;
 }
 
+.custom-progress-bar .progress-bar {
+  border-radius: 10px; /* half of the height value */
+}
+
+.progressBarThin {
+  height: 3px;
+  background-color: rgba(128,128,153,1);
+}
+
+.progressBarThin .progress-bar {
+  height: 100%;
+  border-radius: 0;
+}
