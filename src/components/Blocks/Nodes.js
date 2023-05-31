@@ -6,7 +6,7 @@ import SearchField from "../layout/SearchField";
 import { activeNodesList } from "../../NodeList";
 import List from "../../UI/List";
 import Footer from "../layout/Footer";
-import lightNode from '../../assets/Blocks/Nodes Light.svg'
+
 
 const Nodes = () => {
   const {theme} = useContext(ThemeContext);

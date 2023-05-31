@@ -144,6 +144,8 @@ const List = ({ activeNodes }) => {
                     borderRadius: "5px",
                     fontSize: "16px",
                     fontFamily: "Poppins",
+                    textTransform:'capitalize',
+                    color: "white"
                   }}
                 >
                   {node.action}

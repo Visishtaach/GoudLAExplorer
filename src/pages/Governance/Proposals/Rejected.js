@@ -141,6 +141,7 @@ const Rejected = () => {
                           fontSize: "16px",
                           fontFamily: "Poppins",
                           textAlign: "left",
+                          textTransform:'capitalize'
                           // fontWeight:'bold'
                         }}
                       >

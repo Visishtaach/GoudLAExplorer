@@ -137,7 +137,7 @@ const Passed = () => {
                             variant="danger"
                             key={3}
                             now={item.progress3}
-                            label={`${item.progress3}.`}
+                            label={`.${item.progress3}.`}
                             style={{
                               borderTopRightRadius: "10px",
                               borderBottomRightRadius: "10px",
@@ -171,6 +171,7 @@ const Passed = () => {
                           fontSize: "16px",
                           fontFamily: "Poppins",
                           textAlign: "left",
+                          textTransform:"capitalize"
                         }}
                       >
                         <BsDot />
