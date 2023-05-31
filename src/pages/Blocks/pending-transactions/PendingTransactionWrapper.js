@@ -235,7 +235,7 @@ const PendingTransactionWrapper = ({ pendingTxns }) => {
                   }}
                 >
                   {txn.to}{" "}
-                  <img src={filter} style={{ width: "15px", height: "15px" }} />
+                  <img src={filter} style={{ width: "15px", height: "15px" }} alt="icon" />
                 </div>
               </td>
               <td style={{ paddingTop: "25px" }}>

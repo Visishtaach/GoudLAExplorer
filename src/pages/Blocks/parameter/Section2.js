@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../../../themecontext/ThemeContext";
-import ListGroup from "react-bootstrap/ListGroup";
 
 const Section2 = () => {
   const { theme } = useContext(ThemeContext);
@@ -27,11 +26,12 @@ const Section2 = () => {
       <h4>Application Version</h4>
       <div>
         <div className="row">
-          <div className={theme === 'light' ? 'scrollbar-list' : 'scrollbar-list-black'}>
-       
-            <ul
-             
-            >
+          <div
+            className={
+              theme === "light" ? "scrollbar-list" : "scrollbar-list-black"
+            }
+          >
+            <ul>
               <li
                 style={{
                   borderBottom:
@@ -55,9 +55,9 @@ const Section2 = () => {
               <li
                 style={{
                   borderBottom:
-                  theme === "light"
-                    ? "1px solid rgba(235,235,235,1)"
-                    : "1px solid rgba(22,22,63,1)",
+                    theme === "light"
+                      ? "1px solid rgba(235,235,235,1)"
+                      : "1px solid rgba(22,22,63,1)",
                   display: "flex",
                   padding: "10px",
                 }}
@@ -75,9 +75,9 @@ const Section2 = () => {
               <li
                 style={{
                   borderBottom:
-                  theme === "light"
-                    ? "1px solid rgba(235,235,235,1)"
-                    : "1px solid rgba(22,22,63,1)",
+                    theme === "light"
+                      ? "1px solid rgba(235,235,235,1)"
+                      : "1px solid rgba(22,22,63,1)",
                   display: "flex",
                   padding: "10px",
                 }}
@@ -95,9 +95,9 @@ const Section2 = () => {
               <li
                 style={{
                   borderBottom:
-                  theme === "light"
-                    ? "1px solid rgba(235,235,235,1)"
-                    : "1px solid rgba(22,22,63,1)",
+                    theme === "light"
+                      ? "1px solid rgba(235,235,235,1)"
+                      : "1px solid rgba(22,22,63,1)",
                   display: "flex",
                   padding: "10px",
                 }}
@@ -115,9 +115,9 @@ const Section2 = () => {
               <li
                 style={{
                   borderBottom:
-                  theme === "light"
-                    ? "1px solid rgba(235,235,235,1)"
-                    : "1px solid rgba(22,22,63,1)",
+                    theme === "light"
+                      ? "1px solid rgba(235,235,235,1)"
+                      : "1px solid rgba(22,22,63,1)",
                   display: "flex",
                   padding: "10px",
                 }}
@@ -135,9 +135,9 @@ const Section2 = () => {
               <li
                 style={{
                   borderBottom:
-                  theme === "light"
-                    ? "1px solid rgba(235,235,235,1)"
-                    : "1px solid rgba(22,22,63,1)",
+                    theme === "light"
+                      ? "1px solid rgba(235,235,235,1)"
+                      : "1px solid rgba(22,22,63,1)",
                   display: "flex",
                   padding: "10px",
                 }}
@@ -155,9 +155,9 @@ const Section2 = () => {
               <li
                 style={{
                   borderBottom:
-                  theme === "light"
-                    ? "1px solid rgba(235,235,235,1)"
-                    : "1px solid rgba(22,22,63,1)",
+                    theme === "light"
+                      ? "1px solid rgba(235,235,235,1)"
+                      : "1px solid rgba(22,22,63,1)",
                   display: "flex",
                   padding: "10px",
                 }}
@@ -173,168 +173,168 @@ const Section2 = () => {
                 </div>
               </li>{" "}
             </ul>
-           <div className = {theme === "light" ? "scroll-list" : " scroll-list-black"}>
-           <ul
-              
+            <div
+              className={
+                theme === "light" ? "scroll-list" : " scroll-list-black"
+              }
             >
-              <li style={{ display: "flex" }}>
-                <div
-                  className="col-md-3"
-                  style={{ fontSize: "24px", fontFamily: "Poppins" }}
-                >
-                  {/* go_version */}
-                </div>
-                <div
-                  className="col-md-9 d-flex flex-direction-row"
-                  style={{
-                    borderBottom:
-                    theme === "light"
-                      ? "1px solid rgba(235,235,235,1)"
-                      : "1px solid rgba(22,22,63,1)",
-                    fontSize: "24px",
-                    fontFamily: "Poppins",
-                    padding: "10px",
-                  }}
-                >
-                  <div
-                    className="col-md-4 "
-                    style={{ fontSize: "22px", fontFamily: "Poppins" }}
-                  >
-                    Path
-                  </div>
+              <ul>
+                <li style={{ display: "flex" }}>
                   <div
                     className="col-md-3"
-                    style={{ fontSize: "22px", fontFamily: "Poppins" }}
+                    style={{ fontSize: "24px", fontFamily: "Poppins" }}
                   >
-                    version
+                    {/* go_version */}
                   </div>
+                  <div
+                    className="col-md-9 d-flex flex-direction-row"
+                    style={{
+                      borderBottom:
+                        theme === "light"
+                          ? "1px solid rgba(235,235,235,1)"
+                          : "1px solid rgba(22,22,63,1)",
+                      fontSize: "24px",
+                      fontFamily: "Poppins",
+                      padding: "10px",
+                    }}
+                  >
+                    <div
+                      className="col-md-4 "
+                      style={{ fontSize: "22px", fontFamily: "Poppins" }}
+                    >
+                      Path
+                    </div>
+                    <div
+                      className="col-md-3"
+                      style={{ fontSize: "22px", fontFamily: "Poppins" }}
+                    >
+                      version
+                    </div>
+                    <div
+                      className="col-md-3"
+                      style={{ fontSize: "22px", fontFamily: "Poppins" }}
+                    >
+                      sum
+                    </div>
+                  </div>
+                </li>
+                <li style={{ display: "flex" }}>
                   <div
                     className="col-md-3"
-                    style={{ fontSize: "22px", fontFamily: "Poppins" }}
+                    style={{ fontSize: "24px", fontFamily: "Poppins" }}
                   >
-                    sum
-                  </div>
-                </div>
-              </li>
-              <li style={{ display: "flex" }}>
-                <div
-                  className="col-md-3"
-                  style={{ fontSize: "24px", fontFamily: "Poppins" }}
-                >
-                  {/* go_version */}
-                </div>
-                <div
-                  className="col-md-9 d-flex flex-direction-row"
-                  style={{
-                    borderBottom:
-                    theme === "light"
-                      ? "1px solid rgba(235,235,235,1)"
-                      : "1px solid rgba(22,22,63,1)",
-                    fontSize: "24px",
-                    fontFamily: "Poppins",
-                    padding: "10px",
-                  }}
-                >
-                  <div
-                    className="col-md-4 "
-                    style={{ fontSize: "12px", fontFamily: "Poppins" }}
-                  >
-                    Filippoioedwards25519
+                    {/* go_version */}
                   </div>
                   <div
-                    className="col-md-3"
-                    style={{ fontSize: "12px", fontFamily: "Poppins" }}
+                    className="col-md-9 d-flex flex-direction-row"
+                    style={{
+                      borderBottom:
+                        theme === "light"
+                          ? "1px solid rgba(235,235,235,1)"
+                          : "1px solid rgba(22,22,63,1)",
+                      fontSize: "24px",
+                      fontFamily: "Poppins",
+                      padding: "10px",
+                    }}
                   >
-                    v1.0.0-rc.1
+                    <div
+                      className="col-md-4 "
+                      style={{ fontSize: "12px", fontFamily: "Poppins" }}
+                    >
+                      Filippoioedwards25519
+                    </div>
+                    <div
+                      className="col-md-3"
+                      style={{ fontSize: "12px", fontFamily: "Poppins" }}
+                    >
+                      v1.0.0-rc.1
+                    </div>
+                    <div
+                      className="col-md-3"
+                      style={{ fontSize: "12px", fontFamily: "Poppins" }}
+                    >
+                      h1:m0vOOB23frxzvAOk44usCgLWvtsxloMCTBGjZlpmGfU=
+                    </div>
                   </div>
-                  <div
-                    className="col-md-3"
-                    style={{ fontSize: "12px", fontFamily: "Poppins" }}
-                  >
-                    h1:m0vOOB23frxzvAOk44usCgLWvtsxloMCTBGjZlpmGfU=
-                  </div>
-                </div>
-              </li>
-              <li style={{ display: "flex" }}>
-                <div
-                  className="col-md-3"
-                  style={{ fontSize: "24px", fontFamily: "Poppins" }}
-                >
-                  {/* go_version */}
-                </div>
-                <div
-                  className="col-md-9 d-flex flex-direction-row"
-                  style={{
-                    borderBottom:
-                    theme === "light"
-                      ? "1px solid rgba(235,235,235,1)"
-                      : "1px solid rgba(22,22,63,1)",
-                    fontSize: "24px",
-                    fontFamily: "Poppins",
-                    padding: "10px",
-                  }}
-                >
-                  <div
-                    className="col-md-4 "
-                    style={{ fontSize: "12px", fontFamily: "Poppins" }}
-                  >
-                    aithub.com/99designs/keyring
-                  </div>
+                </li>
+                <li style={{ display: "flex" }}>
                   <div
                     className="col-md-3"
-                    style={{ fontSize: "12px", fontFamily: "Poppins" }}
+                    style={{ fontSize: "24px", fontFamily: "Poppins" }}
                   >
-                    v1.2.1
+                    {/* go_version */}
                   </div>
+                  <div
+                    className="col-md-9 d-flex flex-direction-row"
+                    style={{
+                      borderBottom:
+                        theme === "light"
+                          ? "1px solid rgba(235,235,235,1)"
+                          : "1px solid rgba(22,22,63,1)",
+                      fontSize: "24px",
+                      fontFamily: "Poppins",
+                      padding: "10px",
+                    }}
+                  >
+                    <div
+                      className="col-md-4 "
+                      style={{ fontSize: "12px", fontFamily: "Poppins" }}
+                    >
+                      aithub.com/99designs/keyring
+                    </div>
+                    <div
+                      className="col-md-3"
+                      style={{ fontSize: "12px", fontFamily: "Poppins" }}
+                    >
+                      v1.2.1
+                    </div>
+                    <div
+                      className="col-md-3"
+                      style={{ fontSize: "12px", fontFamily: "Poppins" }}
+                    >
+                      h1:m0vOOB23frxzvAOk44usCgLWvtsxloMCTBGjZlpmGfU=
+                    </div>
+                  </div>
+                </li>
+                <li style={{ display: "flex" }}>
                   <div
                     className="col-md-3"
-                    style={{ fontSize: "12px", fontFamily: "Poppins" }}
-                  >
-                    h1:m0vOOB23frxzvAOk44usCgLWvtsxloMCTBGjZlpmGfU=
-                  </div>
-                </div>
-              </li>
-              <li style={{ display: "flex" }}>
-                <div
-                  className="col-md-3"
-                  style={{ fontSize: "24px", fontFamily: "Poppins" }}
-                >
-                 
-                </div>
-                <div
-                  className="col-md-9 d-flex flex-direction-row"
-                  style={{
-                    borderBottom:
-                    theme === "light"
-                      ? "1px solid rgba(235,235,235,1)"
-                      : "1px solid rgba(22,22,63,1)",
-                    fontSize: "24px",
-                    fontFamily: "Poppins",
-                    padding: "10px",
-                  }}
-                >
+                    style={{ fontSize: "24px", fontFamily: "Poppins" }}
+                  ></div>
                   <div
-                    className="col-md-4 "
-                    style={{ fontSize: "12px", fontFamily: "Poppins" }}
+                    className="col-md-9 d-flex flex-direction-row"
+                    style={{
+                      borderBottom:
+                        theme === "light"
+                          ? "1px solid rgba(235,235,235,1)"
+                          : "1px solid rgba(22,22,63,1)",
+                      fontSize: "24px",
+                      fontFamily: "Poppins",
+                      padding: "10px",
+                    }}
                   >
-                    aithub.com/99designs/keyring
+                    <div
+                      className="col-md-4 "
+                      style={{ fontSize: "12px", fontFamily: "Poppins" }}
+                    >
+                      aithub.com/99designs/keyring
+                    </div>
+                    <div
+                      className="col-md-3"
+                      style={{ fontSize: "12px", fontFamily: "Poppins" }}
+                    >
+                      v1.2.1
+                    </div>
+                    <div
+                      className="col-md-3"
+                      style={{ fontSize: "12px", fontFamily: "Poppins" }}
+                    >
+                      h1:m0vOOB23frxzvAOk44usCgLWvtsxloMCTBGjZlpmGfU=
+                    </div>
                   </div>
-                  <div
-                    className="col-md-3"
-                    style={{ fontSize: "12px", fontFamily: "Poppins" }}
-                  >
-                    v1.2.1
-                  </div>
-                  <div
-                    className="col-md-3"
-                    style={{ fontSize: "12px", fontFamily: "Poppins" }}
-                  >
-                    h1:m0vOOB23frxzvAOk44usCgLWvtsxloMCTBGjZlpmGfU=
-                  </div>
-                </div>
-              </li>
-            </ul>
-           </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

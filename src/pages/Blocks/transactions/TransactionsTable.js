@@ -1,10 +1,9 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../../../themecontext/ThemeContext";
 import way from "../../../assets/Blocks/greenArrow.svg";
-import { ImNotification } from "react-icons/im";
-import { AiOutlineEye } from "react-icons/ai";
-import eye from '../../../assets/Blocks/Eye.svg';
-import method from '../../../assets/Blocks/method.svg'
+
+import eye from "../../../assets/Blocks/Eye.svg";
+import method from "../../../assets/Blocks/method.svg";
 
 const TransactionsTable = ({ activeNodes }) => {
   const { theme } = useContext(ThemeContext);
@@ -13,8 +12,7 @@ const TransactionsTable = ({ activeNodes }) => {
       <table
         className="table table-border"
         style={{
-          borderBottom:
-            theme === "light" ? "" : "1px solid rgba(22,22,63,1)",
+          borderBottom: theme === "light" ? "" : "1px solid rgba(22,22,63,1)",
         }}
       >
         <thead>
@@ -50,7 +48,12 @@ const TransactionsTable = ({ activeNodes }) => {
                 color: "rgba(128,128,153,1)",
               }}
             >
-              Method <img src={method} alt="icon" style={{ color: "rgba(128,128,153,1)"}} />
+              Method{" "}
+              <img
+                src={method}
+                alt="icon"
+                style={{ color: "rgba(128,128,153,1)" }}
+              />
             </th>
             <th
               style={{
@@ -136,24 +139,31 @@ const TransactionsTable = ({ activeNodes }) => {
                     color: "rgba(128,128,153,1)",
                   }}
                 >
-                  <p style={{ display: "flex", gap: "10px", flexDirection:'row' }}>
+                  <p
+                    style={{
+                      display: "flex",
+                      gap: "10px",
+                      flexDirection: "row",
+                    }}
+                  >
                     {" "}
-                   
                     <span style={{ fontSize: "16px", fontFamily: "Poppins" }}>
-                     
-                        {" "}
-                        <img src={eye} alt="icon" style={{ 
-                      border:  theme === "light"
-                      ? "1px solid rgba(235,235,235,1)"
-                      : "1px solid rgba(22,22,63,1)",
-                      borderRadius: "5px",
-                     
-                      width:'30px',
-                      height:'31px',
-                          padding:'5px'
-                     
-                      }} />{" "}
-                  
+                      {" "}
+                      <img
+                        src={eye}
+                        alt="icon"
+                        style={{
+                          border:
+                            theme === "light"
+                              ? "1px solid rgba(235,235,235,1)"
+                              : "1px solid rgba(22,22,63,1)",
+                          borderRadius: "5px",
+
+                          width: "30px",
+                          height: "31px",
+                          padding: "5px",
+                        }}
+                      />{" "}
                       {node.TxnHash}
                     </span>
                   </p>
@@ -165,7 +175,7 @@ const TransactionsTable = ({ activeNodes }) => {
                   style={{
                     fontSize: "16px",
                     fontFamily: "Poppins",
-                    color: theme==="dark"?"rgba(0,0,51,1)":"white",
+                    color: theme === "dark" ? "rgba(0,0,51,1)" : "white",
                     backgroundColor: "rgba(128,128,153,1)",
                     textAlign: "center",
                     borderRadius: "5px",

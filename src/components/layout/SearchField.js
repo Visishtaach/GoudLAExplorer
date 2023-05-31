@@ -1,12 +1,12 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../../themecontext/ThemeContext";
-import { Row, Col, Container, Form, InputGroup } from "react-bootstrap";
+import { Form, InputGroup } from "react-bootstrap";
 import { BsSearch } from "react-icons/bs";
-import logo from '../../assets/Blocks/logo.svg'
-import lightlogo from '../../assets/logo light.svg'
+import logo from "../../assets/Blocks/logo.svg";
+import lightlogo from "../../assets/logo light.svg";
 
 const SearchField = () => {
-  const { theme, toggleTheme, themeConfig } = useContext(ThemeContext);
+  const { theme,  themeConfig } = useContext(ThemeContext);
 
   const navbarStyle = {
     backgroundColor: themeConfig[theme].backgroundColor,
@@ -23,10 +23,8 @@ const SearchField = () => {
         <div className="w-70">
           <h4
             style={{
-              color: "rgba(255,255,255,1)",
               fontSize: "24px",
               fontFamily: "Poppins",
-              // marginTop: "20px",
               color: theme === "light" ? "black" : "white",
             }}
           >
@@ -36,15 +34,17 @@ const SearchField = () => {
             className="mb-2"
             style={{
               border:
-                theme === "dark" ? "2px solid rgba(128,99,172,1)" : "1px solid rgba(128,99,172,1)",
+                theme === "dark"
+                  ? "2px solid rgba(128,99,172,1)"
+                  : "1px solid rgba(128,99,172,1)",
               borderRadius: "15px",
             }}
           >
             <Form.Control
-            className="custom-input"
+              className="custom-input"
               placeholder="Search by address / Txn Hash / Blocks"
               style={{
-                backgroundColor: theme === "light"?"white":"black",
+                backgroundColor: theme === "light" ? "white" : "black",
                 border: "none",
                 padding: "12px 6px",
                 margin: 0,
@@ -52,9 +52,9 @@ const SearchField = () => {
                 fontFamily: "Poppins",
                 height: "53px",
                 color: "#B6B6B6",
-                outline:'none',
+                outline: "none",
                 borderTopLeftRadius: "15px",
-                borderBottomLeftRadius:'15px'
+                borderBottomLeftRadius: "15px",
               }}
             />
             <InputGroup.Text
@@ -63,10 +63,10 @@ const SearchField = () => {
                 border: "none",
                 borderLeft: "none",
                 borderColor: theme === "dark" ? "rgba(128,99,172,1)" : "none",
-                backgroundColor:  theme === "light"?"white":"black",
+                backgroundColor: theme === "light" ? "white" : "black",
                 margin: 0,
                 borderTopRightRadius: "15px",
-                borderBottomRightRadius:'15px'
+                borderBottomRightRadius: "15px",
               }}
             >
               <BsSearch
@@ -79,7 +79,6 @@ const SearchField = () => {
               />
             </InputGroup.Text>
           </InputGroup>
-         
         </div>
       </div>
       <div
@@ -96,11 +95,11 @@ const SearchField = () => {
             alignItems: "center",
             justifyContent: "flex-end",
             flexDirection: "row",
-            gap:'8px'
+            gap: "8px",
           }}
         >
           <div>
-            <img src={theme === "light"? lightlogo : logo} alt="icon" />
+            <img src={theme === "light" ? lightlogo : logo} alt="icon" />
           </div>
           <div>
             <div

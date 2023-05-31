@@ -1,11 +1,6 @@
 import React, { useContext } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import {
-  createBrowserRouter,
-  Route,
-  RouterProvider,
-  Switch,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Proposals from "./pages/Governance/Proposals/Proposal";
 
 import "./App.css";
@@ -13,7 +8,7 @@ import Home from "./components/layout/Home";
 import { ThemeContext } from "./themecontext/ThemeContext";
 import Boards from "./pages/Governance/Boards/Boards";
 import Nodes from "./pages/Blocks/nodes/Nodes";
-import Transaction from "./pages/Blocks/transactions/Transaction"
+import Transaction from "./pages/Blocks/transactions/Transaction";
 import PendingTransaction from "./pages/Blocks/pending-transactions/PendingTransaction";
 import ViewBlocks from "./pages/Blocks/view-blocks/ViewBlocks";
 import Parameter from "./pages/Blocks/parameter/Parameter";
@@ -29,10 +24,10 @@ const router1 = createBrowserRouter([
   { path: "/transactions", element: <Transaction /> },
   { path: "/pending-transactions", element: <PendingTransaction /> },
   { path: "/view-blocks", element: <ViewBlocks /> },
-  {path:"/parameters", element:<Parameter/>},
-  {path:"/upTime", element:<Overall/>},
-  {path:"/passed-details", element:<PassedDetails/>},
-  {path:'/rejected-details', element:<RejectedDetails />}
+  { path: "/parameters", element: <Parameter /> },
+  { path: "/upTime", element: <Overall /> },
+  { path: "/passed-details", element: <PassedDetails /> },
+  { path: "/rejected-details", element: <RejectedDetails /> },
 ]);
 
 function App() {

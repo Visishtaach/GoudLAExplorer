@@ -3,7 +3,6 @@ import Header from "../../../components/layout/Header";
 import SearchField from "../../../components/layout/SearchField";
 import { ThemeContext } from "../../../themecontext/ThemeContext";
 import pool from "../../../assets/Blocks/pool.svg";
-import leftarrow from "../../../assets/Blocks/left.svg";
 import { pendingTransactionsData } from "../../../helpers/pendingTransactionsData";
 import PendingTransactionWrapper from "./PendingTransactionWrapper";
 import Footer from "../../../components/layout/Footer";

@@ -61,7 +61,7 @@ const BoardsWrapper = ({ BoardsData }) => {
                 paddingBottom: "20px",
               }}
             >
-            <img src={theme==="light" ? arrow : arrowDark} style={{ width:'15px', height:'15px'}}/>  Voting Power
+            <img src={theme==="light" ? arrow : arrowDark} style={{ width:'15px', height:'15px'}} alt="icon"/>  Voting Power
             </th>
             <th
               style={{
@@ -71,7 +71,7 @@ const BoardsWrapper = ({ BoardsData }) => {
                 paddingBottom: "20px",
               }}
             >
-             <img src={theme==="light" ? arrow : arrowDark} style={{ width:'15px', height:'15px'}}/>  First Block
+             <img src={theme==="light" ? arrow : arrowDark} style={{ width:'15px', height:'15px'}} alt="icon"/>  First Block
             </th>
             <th
               style={{
@@ -81,7 +81,7 @@ const BoardsWrapper = ({ BoardsData }) => {
                 paddingBottom: "20px",
               }}
             >
-             <img src={theme==="light" ? arrow : arrowDark} style={{ width:'15px', height:'15px'}}/>  Last Block
+             <img src={theme==="light" ? arrow : arrowDark} style={{ width:'15px', height:'15px'}} alt="icon"/>  Last Block
             </th>
             <th
               style={{
@@ -91,7 +91,7 @@ const BoardsWrapper = ({ BoardsData }) => {
                 paddingBottom: "20px",
               }}
             >
-             <img src={theme==="light" ? arrow : arrowDark} style={{ width:'15px', height:'15px'}}/>  1 Day
+             <img src={theme==="light" ? arrow : arrowDark} style={{ width:'15px', height:'15px'}} alt="icon"/>  1 Day
             </th>
             <th
               style={{
@@ -101,7 +101,7 @@ const BoardsWrapper = ({ BoardsData }) => {
                 paddingBottom: "20px",
               }}
             >
-             <img src={theme==="light" ? arrow : arrowDark} style={{ width:'15px', height:'15px'}}/>  7 Days
+             <img src={theme==="light" ? arrow : arrowDark} style={{ width:'15px', height:'15px'}} alt="icon"/>  7 Days
             </th>
             <th
               style={{
@@ -111,7 +111,7 @@ const BoardsWrapper = ({ BoardsData }) => {
                 paddingBottom: "20px",
               }}
             >
-            <img src={theme==="light" ? arrow : arrowDark} style={{ width:'15px', height:'15px'}}/>   30 Days
+            <img src={theme==="light" ? arrow : arrowDark} style={{ width:'15px', height:'15px'}} alt="icon"/>   30 Days
             </th>
             <th
               style={{
@@ -234,7 +234,7 @@ const BoardsWrapper = ({ BoardsData }) => {
               <td style={{ paddingTop: "25px" }}>
                 <div
                   style={{
-                    color: "rgba(128,128,153,1)",
+                
                     fontSize: "16px",
                     fontFamily: "Poppins",
                     color:'#23A15F'

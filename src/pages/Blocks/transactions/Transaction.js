@@ -8,8 +8,6 @@ import { transactionsData } from "../../../helpers/transactionsData";
 import { SlArrowRight } from "react-icons/sl";
 import { SlArrowLeft } from "react-icons/sl";
 
-import leftarrow from "../../../assets/Blocks/left.svg";
-
 const Transaction = () => {
   const { theme } = useContext(ThemeContext);
   return (
@@ -32,7 +30,6 @@ const Transaction = () => {
           Transactions
         </h4>
       </div>
-      
 
       <div
         className="container-sm"
@@ -61,8 +58,8 @@ const Transaction = () => {
 
             borderBottom:
               theme === "light"
-              ? "1px solid rgb(226, 226, 226)"
-              : "1px solid rgba(22,22,63,1)",
+                ? "1px solid rgb(226, 226, 226)"
+                : "1px solid rgba(22,22,63,1)",
           }}
         >
           <div className="col-lg-6">
@@ -181,7 +178,7 @@ const Transaction = () => {
                       ? "1px solid rgb(226, 226, 226)"
                       : "1px solid rgba(22,22,63,1)",
                   // padding: "1px 13px 4px",
-                  padding:'5px',
+                  padding: "5px",
                   height: "38px",
                   backgroundColor: "rgba(127,127,152,1)",
                 }}
@@ -192,9 +189,7 @@ const Transaction = () => {
           </div>
         </div>
 
-       
-            <TransactionsTable activeNodes={transactionsData} />
-          
+        <TransactionsTable activeNodes={transactionsData} />
       </div>
 
       <Footer />

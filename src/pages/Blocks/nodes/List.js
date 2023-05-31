@@ -10,8 +10,7 @@ const List = ({ activeNodes }) => {
       <table
         className="table table-border"
         style={{
-          borderBottom:
-            theme === "light" ? "" : "1px solid rgba(22,22,63,1)",
+          borderBottom: theme === "light" ? "" : "1px solid rgba(22,22,63,1)",
         }}
       >
         <thead>
@@ -95,7 +94,10 @@ const List = ({ activeNodes }) => {
                   </p>
                   <p style={{ display: "flex", gap: "10px" }}>
                     {" "}
-                    <img src={theme === "light" ? lightNode : path} />
+                    <img
+                      src={theme === "light" ? lightNode : path}
+                      alt="icon"
+                    />
                     <span style={{ fontSize: "24px", fontFamily: "Poppins" }}>
                       {node.validator}
                     </span>

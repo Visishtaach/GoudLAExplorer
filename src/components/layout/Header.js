@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../../themecontext/ThemeContext";
-import { NavLink, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import "./Header.css";
 import logo from "../../assets/logo.png";
 import group from "../../assets/Icons/group.svg";

@@ -142,7 +142,7 @@ const Section1 = () => {
         </div>
       </div>
       <StakingParameters/>
-     {/* <GovernaneParameters /> */}
+     <GovernaneParameters />
      <DistributionParameters />
      <SlashingParameters/>
     </div>
