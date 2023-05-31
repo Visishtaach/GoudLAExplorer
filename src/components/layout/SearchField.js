@@ -35,15 +35,15 @@ const SearchField = () => {
             className="mb-2"
             style={{
               border:
-                theme === "dark" ? "2px solid rgba(128,99,172,1)" : "none",
-              borderRadius: "8px",
+                theme === "dark" ? "2px solid rgba(128,99,172,1)" : "1px solid rgba(128,99,172,1)",
+              borderRadius: "15px",
             }}
           >
             <Form.Control
             className="custom-input"
               placeholder="Search by address / Txn Hash / Blocks"
               style={{
-                backgroundColor: "black",
+                backgroundColor: theme === "light"?"white":"black",
                 border: "none",
                 padding: "12px 6px",
                 margin: 0,
@@ -51,7 +51,9 @@ const SearchField = () => {
                 fontFamily: "Poppins",
                 height: "53px",
                 color: "#B6B6B6",
-                outline:'none'
+                outline:'none',
+                borderTopLeftRadius: "15px",
+                borderBottomLeftRadius:'15px'
               }}
             />
             <InputGroup.Text
@@ -60,8 +62,10 @@ const SearchField = () => {
                 border: "none",
                 borderLeft: "none",
                 borderColor: theme === "dark" ? "rgba(128,99,172,1)" : "none",
-                backgroundColor: "black",
+                backgroundColor:  theme === "light"?"white":"black",
                 margin: 0,
+                borderTopRightRadius: "15px",
+                borderBottomRightRadius:'15px'
               }}
             >
               <BsSearch

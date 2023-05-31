@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../../../themecontext/ThemeContext";
-import way from "../../../assets/Blocks/greenArrow.svg";
-import { ImNotification } from "react-icons/im";
-import { AiOutlineEye } from "react-icons/ai";
-import eye from '../../../assets/Blocks/Eye.svg';
-import method from '../../../assets/Blocks/method.svg'
+import tickmark from "../../../assets/Blocks/tick.svg";
+import wifi from "../../../assets/Blocks/wifi.svg";
+import arrow from '../../../assets/Blocks/Arrows.svg';
+import arrowDark from '../../../assets/Blocks/Arrows Dark.svg';
 
-const TransactionsTable = ({ activeNodes }) => {
+const BoardsWrapper = ({ BoardsData }) => {
   const { theme } = useContext(ThemeContext);
+
   return (
     <div className="table-responsive pt-5">
       <table
@@ -20,24 +20,26 @@ const TransactionsTable = ({ activeNodes }) => {
         <thead>
           <tr
             style={{
-              color: theme === "light" ? "black" : "rgba(225,225,225,1)",
-              //   border:theme ==="light"? "gray" : "",
               textAlign: "left",
               alignItems: "center",
-              //   justifyContent: "center",
+              backgroundColor: "rgba(128,128,153,1)",
+              color: theme === "light" ? "white" : "rgba(0,0,51,1)",
+            border:'none'
             }}
           >
             <th
               style={{
-                textAlign: "left",
+                textAlign: "center",
                 fontSize: "20px",
                 fontFamily: "Poppins",
                 fontWeight: "normal",
+                paddingTop:'20px',
                 paddingBottom: "20px",
-                color: "rgba(128,128,153,1)",
+                borderTopLeftRadius: '15px',
+                borderBottomLeftRadius: '15px'
               }}
             >
-              Txn Hash
+              Rank
             </th>
 
             <th
@@ -47,10 +49,9 @@ const TransactionsTable = ({ activeNodes }) => {
                 fontFamily: "Poppins",
                 fontWeight: "normal",
                 paddingBottom: "20px",
-                color: "rgba(128,128,153,1)",
               }}
             >
-              Method <img src={method} alt="icon" style={{ color: "rgba(128,128,153,1)"}} />
+              Address
             </th>
             <th
               style={{
@@ -58,10 +59,9 @@ const TransactionsTable = ({ activeNodes }) => {
                 fontFamily: "Poppins",
                 fontWeight: "normal",
                 paddingBottom: "20px",
-                color: "rgba(128,128,153,1)",
               }}
             >
-              Block{" "}
+            <img src={theme==="light" ? arrow : arrowDark} style={{ width:'15px', height:'15px'}}/>  Voting Power
             </th>
             <th
               style={{
@@ -69,10 +69,9 @@ const TransactionsTable = ({ activeNodes }) => {
                 fontFamily: "Poppins",
                 fontWeight: "normal",
                 paddingBottom: "20px",
-                color: "rgba(128,128,153,1)",
               }}
             >
-              Age
+             <img src={theme==="light" ? arrow : arrowDark} style={{ width:'15px', height:'15px'}}/>  First Block
             </th>
             <th
               style={{
@@ -80,10 +79,9 @@ const TransactionsTable = ({ activeNodes }) => {
                 fontFamily: "Poppins",
                 fontWeight: "normal",
                 paddingBottom: "20px",
-                color: "rgba(128,128,153,1)",
               }}
             >
-              From
+             <img src={theme==="light" ? arrow : arrowDark} style={{ width:'15px', height:'15px'}}/>  Last Block
             </th>
             <th
               style={{
@@ -91,10 +89,9 @@ const TransactionsTable = ({ activeNodes }) => {
                 fontFamily: "Poppins",
                 fontWeight: "normal",
                 paddingBottom: "20px",
-                color: "rgba(128,128,153,1)",
               }}
             >
-              To
+             <img src={theme==="light" ? arrow : arrowDark} style={{ width:'15px', height:'15px'}}/>  1 Day
             </th>
             <th
               style={{
@@ -102,10 +99,9 @@ const TransactionsTable = ({ activeNodes }) => {
                 fontFamily: "Poppins",
                 fontWeight: "normal",
                 paddingBottom: "20px",
-                color: "rgba(128,128,153,1)",
               }}
             >
-              Value
+             <img src={theme==="light" ? arrow : arrowDark} style={{ width:'15px', height:'15px'}}/>  7 Days
             </th>
             <th
               style={{
@@ -113,17 +109,28 @@ const TransactionsTable = ({ activeNodes }) => {
                 fontFamily: "Poppins",
                 fontWeight: "normal",
                 paddingBottom: "20px",
-                color: "rgba(128,128,153,1)",
               }}
             >
-              Txn Fee
+            <img src={theme==="light" ? arrow : arrowDark} style={{ width:'15px', height:'15px'}}/>   30 Days
+            </th>
+            <th
+              style={{
+                fontSize: "20px",
+                fontFamily: "Poppins",
+                fontWeight: "normal",
+                paddingBottom: "20px",
+                borderTopRightRadius: '15px',
+                borderBottomRightRadius: '15px'
+              }}
+            >
+              Active
             </th>
           </tr>
         </thead>
         <tbody>
-          {activeNodes.map((node) => (
+          {BoardsData.map((node, index) => (
             <tr
-              key={node.id}
+              key={index}
               style={{
                 color: theme === "light" ? "black" : "rgba(225,225,225,1)",
               }}
@@ -132,27 +139,15 @@ const TransactionsTable = ({ activeNodes }) => {
                 <div
                   style={{
                     display: "flex",
-                    gap: "25px",
-                    color: "rgba(128,128,153,1)",
+                    gap: "25px", textAlign:'center'
+                    // color: "rgba(128,128,153,1)",
                   }}
                 >
-                  <p style={{ display: "flex", gap: "10px", flexDirection:'row' }}>
+                  <p style={{ display: "flex", gap: "10px" }}>
                     {" "}
-                   
-                    <span style={{ fontSize: "16px", fontFamily: "Poppins" }}>
-                     
-                        {" "}
-                        <img src={eye} alt="icon" style={{ 
-                      border: "1px solid rgba(22,22,63,1)",
-                      borderRadius: "5px",
-                     
-                      width:'30px',
-                      height:'31px',
-                          padding:'5px'
-                     
-                      }} />{" "}
-                  
-                      {node.TxnHash}
+                    {/* <img src={path} /> */}
+                    <span style={{ fontSize: "16px", fontFamily: "Poppins", }}>
+                      {node.rank}
                     </span>
                   </p>
                 </div>
@@ -161,15 +156,15 @@ const TransactionsTable = ({ activeNodes }) => {
               <td style={{ paddingRight: "5px", paddingTop: "25px" }}>
                 <div
                   style={{
-                    fontSize: "16px",
+                    fontSize: "14px",
                     fontFamily: "Poppins",
-                    color: theme==="dark"?"rgba(0,0,51,1)":"white",
-                    backgroundColor: "rgba(128,128,153,1)",
-                    textAlign: "center",
-                    borderRadius: "5px",
+
+                    // backgroundColor: "rgba(128,128,153,1)",
+                    // textAlign: "center",
+                    // borderRadius: "5px",
                   }}
                 >
-                  {node.method}
+                  {node.address}
                 </div>
               </td>
               <td
@@ -177,10 +172,10 @@ const TransactionsTable = ({ activeNodes }) => {
                   paddingTop: "25px",
                   fontSize: "16px",
                   fontFamily: "Poppins",
-                  color: "rgba(128,128,153,1)",
+                  //   color: "rgba(128,128,153,1)",
                 }}
               >
-                {node.block}
+                <img src={tickmark} alt="icon" /> {node.votingPower}
               </td>
               <td
                 style={{
@@ -190,7 +185,7 @@ const TransactionsTable = ({ activeNodes }) => {
                   color: "rgba(128,128,153,1)",
                 }}
               >
-                {node.age}
+                {node.firstBlock}
               </td>
               <td style={{ paddingTop: "25px" }}>
                 <div
@@ -200,7 +195,7 @@ const TransactionsTable = ({ activeNodes }) => {
                     fontFamily: "Poppins",
                   }}
                 >
-                  {node.from}
+                  {node.lastBlock}
                 </div>
               </td>
               <td style={{ paddingTop: "25px" }}>
@@ -211,7 +206,7 @@ const TransactionsTable = ({ activeNodes }) => {
                     fontFamily: "Poppins",
                   }}
                 >
-                  <img src={way} alt="icon" /> {node.To}
+                  {node.day1}
                 </div>
               </td>
               <td style={{ paddingTop: "25px" }}>
@@ -222,7 +217,7 @@ const TransactionsTable = ({ activeNodes }) => {
                     fontFamily: "Poppins",
                   }}
                 >
-                  {node.VAlue}
+                  {node.day7}
                 </div>
               </td>
               <td style={{ paddingTop: "25px" }}>
@@ -233,7 +228,18 @@ const TransactionsTable = ({ activeNodes }) => {
                     fontFamily: "Poppins",
                   }}
                 >
-                  {node.txnFee}
+                  {node.day30}
+                </div>
+              </td>
+              <td style={{ paddingTop: "25px" }}>
+                <div
+                  style={{
+                    color: "rgba(128,128,153,1)",
+                    fontSize: "16px",
+                    fontFamily: "Poppins",
+                  }}
+                >
+                  <img src={wifi} alt="icon" /> {node.active}
                 </div>
               </td>
             </tr>
@@ -244,4 +250,4 @@ const TransactionsTable = ({ activeNodes }) => {
   );
 };
 
-export default TransactionsTable;
+export default BoardsWrapper;

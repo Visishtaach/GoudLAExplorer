@@ -10,10 +10,108 @@
 
 .progressBarThin {
   height: 3px;
-  background-color: rgba(128,128,153,1);
+  background-color: rgba(128, 128, 153, 1);
 }
 
 .progressBarThin .progress-bar {
   height: 100%;
   border-radius: 0;
 }
+
+.overall-header {
+  /* border:1px solid red; */
+  border-radius: 10px;
+}
+
+.btn-purple {
+  color: #fff;
+  background-color: rgba(139, 86, 163, 1);
+  border-color: rgba(139, 86, 163, 1);
+  text-transform: uppercase;
+}
+
+.scrollbar-list {
+  list-style: none;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.scrollbar-list::-webkit-scrollbar {
+  width: 13px;
+ 
+}
+
+.scrollbar-list::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}
+
+.scrollbar-list::-webkit-scrollbar-thumb {
+  background-color: rgb(128, 128, 153);
+  background-image: linear-gradient(to bottom, rgb(0, 126, 167) 15%, rgb(128, 128, 153) 25%);
+  border-radius: 10px;
+}
+
+
+.scrollbar-list-black {
+  list-style: none;
+  max-height: 530px;
+  overflow-y: auto;
+}
+
+.scrollbar-list-black::-webkit-scrollbar {
+  width: 13px;
+ 
+}
+
+.scrollbar-list-black::-webkit-scrollbar-track {
+  background-color:rgba(0,0,51,1);
+}
+
+.scrollbar-list-black::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,51,1);
+  
+  border-radius: 10px;
+}
+
+.scroll-list {
+  list-style: none;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.scroll-list::-webkit-scrollbar {
+  width: 13px;
+ 
+}
+
+.scroll-list::-webkit-scrollbar-track {
+  background-color:#ffff;
+}
+
+.scroll-list::-webkit-scrollbar-thumb {
+  background-color: rgb(128, 128, 153);
+  background-image: linear-gradient(to bottom, rgb(0, 126, 167) 20%, rgb(128, 128, 153) 20%);
+  border-radius: 5px;
+}
+
+.scroll-list-black {
+  list-style: none;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.scroll-list-black::-webkit-scrollbar {
+  width: 13px;
+ 
+}
+
+.scroll-list-black::-webkit-scrollbar-track {
+  background-color :rgba(0,0,51,1);
+}
+
+.scroll-list-black::-webkit-scrollbar-thumb {
+  background-color:  rgba(0,0,51,1);
+  /* background-image: linear-gradient(to bottom, rgb(0, 126, 167) 20%, rgb(128, 128, 153) 20%); */
+  border-radius: 5px;
+}
+

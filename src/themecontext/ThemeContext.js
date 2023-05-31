@@ -22,7 +22,7 @@ export const ThemeProvider = ({ children }) => {
 
   const themeConfig = {
     light: {
-      backgroundColor: "rgba(245, 245, 245, 1)",
+      backgroundColor: "white",
     },
     dark: {
       backgroundColor: "rgba(0, 0, 21, 1)",

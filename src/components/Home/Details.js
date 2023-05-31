@@ -20,7 +20,8 @@ const Details = () => {
           borderRadius: "15px",
           color: theme === "light" ? "black" : "white",
           height: "auto",
-          boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
+          border: theme==="light" ? "1px solid rgba(235,235,235,1)" : "1px solid #000033"
+        //  boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
           //  margin:'20px'
         }}
       >
@@ -143,8 +144,7 @@ const Details = () => {
                   }}
                 >
                   Transactions
-                </div>
-                <div>
+                  <span>
                   <div
                     style={{
                       fontFamily: "Avenir",
@@ -155,9 +155,7 @@ const Details = () => {
                           : "rgba(255,255,255,1)",
                     }}
                   >
-                    5,266.66.M
-                  </div>{" "}
-                  <div
+                    5,266.66.M <span
                     style={{
                       fontFamily: "Avenir",
                       fontSize: "16px",
@@ -165,9 +163,7 @@ const Details = () => {
                     }}
                   >
                     {" "}
-                    (89.0
-                  </div>{" "}
-                  <div
+                    (89.0 <span
                     style={{
                       fontFamily: "Poppins",
                       fontSize: "16px",
@@ -175,8 +171,14 @@ const Details = () => {
                     }}
                   >
                     TPS)
-                  </div>
+                  </span>
+                  </span>{" "}
+                  </div>{" "}
+                 
+                  
+                </span>
                 </div>
+                
               </div>
             </div>
           </Col>
@@ -214,9 +216,7 @@ const Details = () => {
                     color: "rgba(127,127,152,1)",
                   }}
                 >
-                  Bonded
-                </div>
-                <div>
+                  Bonded <div>
                   <div
                     style={{
                       fontFamily: "Poppins",
@@ -239,6 +239,8 @@ const Details = () => {
                     ($0.02)
                   </div>
                 </div>
+                </div>
+                
               </div>
             </div>
           </Col>
@@ -492,9 +494,7 @@ const Details = () => {
                   }}
                 >
                   Latest Block(Height)
-                </div>
-                {/* <div> */}
-                  <span
+                  <div
                     style={{
                       fontFamily: "Avenir",
                       fontSize: "16px",
@@ -506,7 +506,7 @@ const Details = () => {
                     }}
                   >
                     24517698
-                  </span>{" "}
+                  </div>{" "}
                   <div
                     style={{
                       fontFamily: "Avenir",
@@ -517,6 +517,9 @@ const Details = () => {
                   >
                     (12,989,113,Goud)
                   </div>
+                </div>
+                {/* <div> */}
+                 
                   
                 {/* </div> */}
               </div>

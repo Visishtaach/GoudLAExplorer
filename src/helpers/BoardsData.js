@@ -1,0 +1,137 @@
+export const BoardsData = [
+    {
+        id:1,
+        rank:'#56',
+        address:'n_x61dd481a11a2e761c_nw',
+        votingPower:'936,780 Goud',
+        firstBlock:19413356,
+        lastBlock:'28535099',
+        day1:1279,
+        day7:8906,
+        day30:8906,
+        active:'Yes'
+    },
+    {
+        id:1,
+        rank:'#56',
+        address:'n_x61dd481a11a2e761c_nw',
+        votingPower:'936,780 Goud',
+        firstBlock:19413356,
+        lastBlock:'28535099',
+        day1:1279,
+        day7:8906,
+        day30:8906,
+        active:'Yes'
+    },
+    {
+        id:1,
+        rank:'#56',
+        address:'n_x61dd481a11a2e761c_nw',
+        votingPower:'936,780 Goud',
+        firstBlock:19413356,
+        lastBlock:'28535099',
+        day1:1279,
+        day7:8906,
+        day30:8906,
+        active:'Yes'
+    }, {
+        id:1,
+        rank:'#56',
+        address:'n_x61dd481a11a2e761c_nw',
+        votingPower:'936,780 Goud',
+        firstBlock:19413356,
+        lastBlock:'28535099',
+        day1:1279,
+        day7:8906,
+        day30:8906,
+        active:'Yes'
+    }, {
+        id:1,
+        rank:'#56',
+        address:'n_x61dd481a11a2e761c_nw',
+        votingPower:'936,780 Goud',
+        firstBlock:19413356,
+        lastBlock:'28535099',
+        day1:1279,
+        day7:8906,
+        day30:8906,
+        active:'Yes'
+    }, {
+        id:1,
+        rank:'#56',
+        address:'n_x61dd481a11a2e761c_nw',
+        votingPower:'936,780 Goud',
+        firstBlock:19413356,
+        lastBlock:'28535099',
+        day1:1279,
+        day7:8906,
+        day30:8906,
+        active:'Yes'
+    }, {
+        id:1,
+        rank:'#56',
+        address:'n_x61dd481a11a2e761c_nw',
+        votingPower:'936,780 Goud',
+        firstBlock:19413356,
+        lastBlock:'28535099',
+        day1:1279,
+        day7:8906,
+        day30:8906,
+        active:'Yes'
+    }, {
+        id:1,
+        rank:'#56',
+        address:'n_x61dd481a11a2e761c_nw',
+        votingPower:'936,780 Goud',
+        firstBlock:19413356,
+        lastBlock:'28535099',
+        day1:1279,
+        day7:8906,
+        day30:8906,
+        active:'Yes'
+    }, {
+        id:1,
+        rank:'#56',
+        address:'n_x61dd481a11a2e761c_nw',
+        votingPower:'936,780 Goud',
+        firstBlock:19413356,
+        lastBlock:'28535099',
+        day1:1279,
+        day7:8906,
+        day30:8906,
+        active:'Yes'
+    }, {
+        id:1,
+        rank:'#56',
+        address:'n_x61dd481a11a2e761c_nw',
+        votingPower:'936,780 Goud',
+        firstBlock:19413356,
+        lastBlock:'28535099',
+        day1:1279,
+        day7:8906,
+        day30:8906,
+        active:'Yes'
+    }, {
+        id:1,
+        rank:'#56',
+        address:'n_x61dd481a11a2e761c_nw',
+        votingPower:'936,780 Goud',
+        firstBlock:19413356,
+        lastBlock:'28535099',
+        day1:1279,
+        day7:8906,
+        day30:8906,
+        active:'Yes'
+    }, {
+        id:1,
+        rank:'#56',
+        address:'n_x61dd481a11a2e761c_nw',
+        votingPower:'936,780 Goud',
+        firstBlock:19413356,
+        lastBlock:'28535099',
+        day1:1279,
+        day7:8906,
+        day30:8906,
+        active:'Yes'
+    },
+]

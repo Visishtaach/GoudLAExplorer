@@ -72,8 +72,8 @@ const Main = () => {
                           border:
                             theme === "dark"
                               ? "2px solid rgba(128,99,172,1)"
-                              : "none",
-                          borderRadius: "10px",
+                              : "1px solid rgba(128,99,172,1)",
+                          borderRadius: "15px",
                         }}
                       >
                         <Form.Control
@@ -88,6 +88,8 @@ const Main = () => {
                             fontFamily: "Poppins",
                             height: "53px",
                             color: "#B6B6B6",
+                            borderTopLeftRadius: "15px",
+                            borderBottomLeftRadius:'15px'
                           }}
                         />
                         <InputGroup.Text
@@ -96,9 +98,11 @@ const Main = () => {
                             border: "none",
                             borderLeft: "none",
                             borderColor:
-                              theme === "dark" ? "rgba(128,99,172,1)" : "none",
+                              theme === "dark" ? "rgba(128,99,172,1)" : "#B233F7",
                             backgroundColor: "black",
                             margin: 0,
+                            borderTopRightRadius: "15px",
+                            borderBottomRightRadius:'15px'
                           }}
                         >
                           <BsSearch

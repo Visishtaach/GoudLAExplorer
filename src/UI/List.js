@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import { FaCheck, FaTimes } from "react-icons/fa"; // Example: Using Font Awesome icons
-import path from "../assets/Blocks/Ellipse 124.svg";
+import path from "../assets/Blocks/Nodes Dark.svg";
 import { ThemeContext } from "../themecontext/ThemeContext";
-
+import lightNode from '../assets/Blocks/Nodes Light.svg'
 
 const List = ({ activeNodes }) => {
   const {theme} = useContext(ThemeContext);
@@ -98,7 +98,7 @@ const List = ({ activeNodes }) => {
                   </p>
                   <p style={{ display: "flex", gap: "10px" }}>
                     {" "}
-                    <img src={path} />
+                    <img src={theme === "light" ? lightNode: path} />
                     <span style={{ fontSize: "24px", fontFamily: "Poppins" }}>
                       {node.validator}
                     </span>

@@ -7,6 +7,7 @@ import ViewBlockWrapper from "./ViewBlockWrapper";
 import { viewBlocksData } from "../../../helpers/viewBlocksData";
 import Footer from "../../../components/layout/Footer";
 
+import { SlArrowRight } from "react-icons/sl";
 const ViewBlocks = () => {
   const { theme } = useContext(ThemeContext);
   return (
@@ -33,7 +34,7 @@ const ViewBlocks = () => {
           style={{
             padding: "5px 20px",
             backgroundColor: "rgba(127,127,152,1)",
-            color: "rgba(0,0,51,1)",
+            color:theme==="light" ? "white": "rgba(0,0,51,1)",
             borderRadius: "5px",
             fontFamily: "Poppins",
             fontSize: "16px",
@@ -53,7 +54,8 @@ const ViewBlocks = () => {
           borderRadius: "15px",
           color: theme === "light" ? "black" : "white",
           height: "auto",
-          boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
+        //  boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
+        border: theme==="light" ? "1px solid rgba(235,235,235,1)" : "1px solid #000033",
           margin: "0px 25px",
         }}
       >
@@ -129,28 +131,9 @@ const ViewBlocks = () => {
             >
               Page 1 of 10000
             </div>
-            <div
-              style={{
-                width: "30px",
-                height: "31px",
-                backgroundColor: "rgba(127,127,152,1)",
-                borderRadius: "5px",
-              }}
-            ></div>
-            <div
-              style={{
-                color: "rgba(0,0,51,1)",
-                fontFamily: "Poppins",
-                fontSize: "18px",
-                borderRadius: "5px",
-                border: "1px solid rgba(22,22,63,1)",
-                padding: "3px 13px 4px",
-                height: "30px",
-                backgroundColor: "rgba(127,127,152,1)",
-              }}
-            >
-              Last
-            </div>
+            <div style={{width:'30px', height:'31px', backgroundColor:"rgba(127,127,152,1)", borderRadius:'5px', textAlign:'center',paddingTop:'2px'}}><SlArrowRight style={{color:theme === "light" ? 'white' : 'black', }}/></div>
+            <div style={{color: theme==="dark" ?'rgba(0,0,51,1)':'white', fontFamily:"Poppins",fontSize:'18px',borderRadius:'5px', border:'1px solid rgba(22,22,63,1)',padding:'1px 13px 4px',height:'30px', backgroundColor:'rgba(127,127,152,1)'}}>Last</div>
+
           </div>
         </div>
 

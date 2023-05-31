@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../../../themecontext/ThemeContext";
 import { ImNotification } from "react-icons/im";
-import filter from '../../../assets/Blocks/filter.svg'
+import filter from "../../../assets/Blocks/filter.svg";
 
 const PendingTransactionWrapper = ({ pendingTxns }) => {
   const { theme } = useContext(ThemeContext);
@@ -134,6 +134,7 @@ const PendingTransactionWrapper = ({ pendingTxns }) => {
               key={txn.id}
               style={{
                 color: theme === "light" ? "black" : "rgba(225,225,225,1)",
+                textTransform: "capitalize",
               }}
             >
               <td style={{ paddingTop: "25px" }}>
@@ -146,9 +147,7 @@ const PendingTransactionWrapper = ({ pendingTxns }) => {
                 >
                   <p style={{ display: "flex", gap: "10px" }}>
                     {" "}
-                   
                     <span style={{ fontSize: "16px", fontFamily: "Poppins" }}>
-                      
                       {txn.txnHash}
                     </span>
                   </p>
@@ -160,7 +159,7 @@ const PendingTransactionWrapper = ({ pendingTxns }) => {
                   style={{
                     fontSize: "16px",
                     fontFamily: "Poppins",
-                    color: "rgba(0,0,51,1)",
+                    color: theme === "dark" ? "rgba(0,0,51,1)": "white",
                     backgroundColor: "rgba(128,128,153,1)",
                     textAlign: "center",
                     borderRadius: "5px",
@@ -219,18 +218,12 @@ const PendingTransactionWrapper = ({ pendingTxns }) => {
                     fontFamily: "Poppins",
                   }}
                 >
-                  {txn.from} <img src={filter} alt="icon" style={{width:'15px', height:'15px'}}/>
-                </div>
-              </td>
-              <td style={{ paddingTop: "25px", display:'flex' }}>
-                <div
-                  style={{
-                    color: "rgba(128,128,153,1)",
-                    fontSize: "16px",
-                    fontFamily: "Poppins",
-                  }}
-                >
-                  {txn.to} <img src={filter} style={{width:'15px', height:'15px'}}/>
+                  {txn.from}{" "}
+                  <img
+                    src={filter}
+                    alt="icon"
+                    style={{ width: "15px", height: "15px" }}
+                  />
                 </div>
               </td>
               <td style={{ paddingTop: "25px" }}>
@@ -239,6 +232,19 @@ const PendingTransactionWrapper = ({ pendingTxns }) => {
                     color: "rgba(128,128,153,1)",
                     fontSize: "16px",
                     fontFamily: "Poppins",
+                  }}
+                >
+                  {txn.to}{" "}
+                  <img src={filter} style={{ width: "15px", height: "15px" }} />
+                </div>
+              </td>
+              <td style={{ paddingTop: "25px" }}>
+                <div
+                  style={{
+                    color: "rgba(128,128,153,1)",
+                    fontSize: "16px",
+                    fontFamily: "Poppins",
+                    textTransform: "capitalize",
                   }}
                 >
                   {txn.value}

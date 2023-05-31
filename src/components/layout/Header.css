@@ -4,6 +4,12 @@
   font-family: 'Poppins';
   padding-right: '20px';
 }
+.darkTitle1,
+.darkTitle1 > a {
+  color: white !important;
+  font-family: 'Poppins';
+  padding-right: '20px';
+}
 
 .lightTitle,
 .lightTitle > a {
@@ -36,3 +42,10 @@
     /* Add any other desired styles */
   }
   
+
+
+.active-link {
+  font-weight: bold;
+  color: red;
+}
+
