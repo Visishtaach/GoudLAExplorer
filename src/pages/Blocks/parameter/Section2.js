@@ -27,7 +27,7 @@ const Section2 = () => {
       <h4>Application Version</h4>
       <div>
         <div className="row">
-          <div className={theme === 'light' ? 'scrollbar-list' : ''}>
+          <div className={theme === 'light' ? 'scrollbar-list' : 'scrollbar-list-black'}>
        
             <ul
              
@@ -37,7 +37,7 @@ const Section2 = () => {
                   borderBottom:
                     theme === "light"
                       ? "1px solid rgba(235,235,235,1)"
-                      : "1px solid #000033",
+                      : "1px solid rgba(22,22,63,1)",
                   display: "flex",
                   padding: "10px",
                 }}
@@ -57,7 +57,7 @@ const Section2 = () => {
                   borderBottom:
                   theme === "light"
                     ? "1px solid rgba(235,235,235,1)"
-                    : "1px solid #000033",
+                    : "1px solid rgba(22,22,63,1)",
                   display: "flex",
                   padding: "10px",
                 }}
@@ -77,7 +77,7 @@ const Section2 = () => {
                   borderBottom:
                   theme === "light"
                     ? "1px solid rgba(235,235,235,1)"
-                    : "1px solid #000033",
+                    : "1px solid rgba(22,22,63,1)",
                   display: "flex",
                   padding: "10px",
                 }}
@@ -97,7 +97,7 @@ const Section2 = () => {
                   borderBottom:
                   theme === "light"
                     ? "1px solid rgba(235,235,235,1)"
-                    : "1px solid #000033",
+                    : "1px solid rgba(22,22,63,1)",
                   display: "flex",
                   padding: "10px",
                 }}
@@ -117,7 +117,7 @@ const Section2 = () => {
                   borderBottom:
                   theme === "light"
                     ? "1px solid rgba(235,235,235,1)"
-                    : "1px solid #000033",
+                    : "1px solid rgba(22,22,63,1)",
                   display: "flex",
                   padding: "10px",
                 }}
@@ -137,7 +137,7 @@ const Section2 = () => {
                   borderBottom:
                   theme === "light"
                     ? "1px solid rgba(235,235,235,1)"
-                    : "1px solid #000033",
+                    : "1px solid rgba(22,22,63,1)",
                   display: "flex",
                   padding: "10px",
                 }}
@@ -157,7 +157,7 @@ const Section2 = () => {
                   borderBottom:
                   theme === "light"
                     ? "1px solid rgba(235,235,235,1)"
-                    : "1px solid #000033",
+                    : "1px solid rgba(22,22,63,1)",
                   display: "flex",
                   padding: "10px",
                 }}
@@ -173,16 +173,9 @@ const Section2 = () => {
                 </div>
               </li>{" "}
             </ul>
-           <div className = {theme === "light" ? "scroll-list" : " "}>
+           <div className = {theme === "light" ? "scroll-list" : " scroll-list-black"}>
            <ul
-              style={{
-                // maxHeight: "300px",
-                // overflow: "auto",
-                // borderBottom:
-                //   theme === "light"
-                //     ? "1px solid rgba(235,235,235,1)"
-                //     : "1px solid #000033",
-              }}
+              
             >
               <li style={{ display: "flex" }}>
                 <div
@@ -197,7 +190,7 @@ const Section2 = () => {
                     borderBottom:
                     theme === "light"
                       ? "1px solid rgba(235,235,235,1)"
-                      : "1px solid #000033",
+                      : "1px solid rgba(22,22,63,1)",
                     fontSize: "24px",
                     fontFamily: "Poppins",
                     padding: "10px",
@@ -236,7 +229,7 @@ const Section2 = () => {
                     borderBottom:
                     theme === "light"
                       ? "1px solid rgba(235,235,235,1)"
-                      : "1px solid #000033",
+                      : "1px solid rgba(22,22,63,1)",
                     fontSize: "24px",
                     fontFamily: "Poppins",
                     padding: "10px",
@@ -275,7 +268,7 @@ const Section2 = () => {
                     borderBottom:
                     theme === "light"
                       ? "1px solid rgba(235,235,235,1)"
-                      : "1px solid #000033",
+                      : "1px solid rgba(22,22,63,1)",
                     fontSize: "24px",
                     fontFamily: "Poppins",
                     padding: "10px",
@@ -306,7 +299,7 @@ const Section2 = () => {
                   className="col-md-3"
                   style={{ fontSize: "24px", fontFamily: "Poppins" }}
                 >
-                  {/* go_version */}
+                 
                 </div>
                 <div
                   className="col-md-9 d-flex flex-direction-row"
@@ -314,7 +307,7 @@ const Section2 = () => {
                     borderBottom:
                     theme === "light"
                       ? "1px solid rgba(235,235,235,1)"
-                      : "1px solid #000033",
+                      : "1px solid rgba(22,22,63,1)",
                     fontSize: "24px",
                     fontFamily: "Poppins",
                     padding: "10px",

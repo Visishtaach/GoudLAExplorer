@@ -25,205 +25,211 @@ const Section3 = () => {
     >
       <h4>Node information</h4>
       <div className="row">
-        <div className={theme === "light" ? "scrollbar-list" : "scrollbar-list-black"}>
-          
-        <ul
-             
-             >
-               <li
-                 style={{
-                
-                   display: "flex",
-                   padding: "10px",
-                 }}
-               >
-                 <div
-                   className="col-md-3"
-                   style={{ fontSize: "24px", fontFamily: "Poppins", }}
-                 >
-                   
-                 </div>
-                 <div className="col-md-9" style={textStyle}>
-                   <div className="d-flex flex-direction-row" style={{   borderBottom:
-                     theme === "light"
-                       ? "1px solid rgba(235,235,235,1)"
-                       : "1px solid #000033",}}>
-                        <div className="col-md-4">P2p</div>
-                        <div>8</div>
-                   </div>
-                 </div>
-               </li>
-               <li
-                 style={{
-                
-                   display: "flex",
-                   padding: "10px",
-                 }}
-               >
-                 <div
-                   className="col-md-3"
-                   style={{ fontSize: "24px", fontFamily: "Poppins", }}
-                 >
-                   
-                 </div>
-                 <div className="col-md-9" style={textStyle}>
-                   <div className="d-flex flex-direction-row" style={{   borderBottom:
-                     theme === "light"
-                       ? "1px solid rgba(235,235,235,1)"
-                       : "1px solid #000033",}}>
-                        <div className="col-md-4">Block</div>
-                        <div>11</div>
-                   </div>
-                 </div>
-               </li> <li
-                 style={{
-                
-                   display: "flex",
-                   padding: "10px",
-                 }}
-               >
-                 <div
-                   className="col-md-3"
-                   style={{ fontSize: "24px", fontFamily: "Poppins", }}
-                 >
-                   
-                 </div>
-                 <div className="col-md-9" style={textStyle}>
-                   <div className="d-flex flex-direction-row" style={{   borderBottom:
-                     theme === "light"
-                       ? "1px solid rgba(235,235,235,1)"
-                       : "1px solid #000033",}}>
-                        <div className="col-md-4">App</div>
-                        <div>15</div>
-                   </div>
-                 </div>
-               </li>
-               <li
-                 style={{
-                   borderBottom:
-                   theme === "light"
-                     ? "1px solid rgba(235,235,235,1)"
-                     : "1px solid #000033",
-                   display: "flex",
-                   padding: "10px",
-                 }}
-               >
-                 <div
-                   className="col-md-3"
-                   style={{ fontSize: "24px", fontFamily: "Poppins" }}
-                 >
-                  default_node_id
-                 </div>
-                 <div className="col-md-9" style={textStyle}>
-                 49802f6924730718069ad5aa18ffq55q1827699e
-                 </div>
-               </li>{" "}
-               <li
-                 style={{
-                   borderBottom:
-                   theme === "light"
-                     ? "1px solid rgba(235,235,235,1)"
-                     : "1px solid #000033",
-                   display: "flex",
-                   padding: "10px",
-                 }}
-               >
-                 <div
-                   className="col-md-3"
-                   style={{ fontSize: "24px", fontFamily: "Poppins" }}
-                 >
-                   listen_addr
-                 </div>
-                 <div className="col-md-9" style={textStyle}>
-                   144.126.222.208.31311
-                 </div>
-               </li>{" "}
-               <li
-                 style={{
-                   borderBottom:
-                   theme === "light"
-                     ? "1px solid rgba(235,235,235,1)"
-                     : "1px solid #000033",
-                   display: "flex",
-                   padding: "10px",
-                 }}
-               >
-                 <div
-                   className="col-md-3"
-                   style={{ fontSize: "24px", fontFamily: "Poppins" }}
-                 >
-                   network
-                 </div>
-                 <div className="col-md-9" style={textStyle}>
-                   osmosis-1
-                 </div>
-               </li>
-               <li
-                 style={{
-                   borderBottom:
-                   theme === "light"
-                     ? "1px solid rgba(235,235,235,1)"
-                     : "1px solid #000033",
-                   display: "flex",
-                   padding: "10px",
-                 }}
-               >
-                 <div
-                   className="col-md-3"
-                   style={{ fontSize: "24px", fontFamily: "Poppins" }}
-                 >
-                   channels
-                 </div>
-                 <div className="col-md-9" style={textStyle}>
-                   QCahillMwOGBhAA==
-                 </div>
-               </li>{" "}
-               <li
-                 style={{
-                   borderBottom:
-                   theme === "light"
-                     ? "1px solid rgba(235,235,235,1)"
-                     : "1px solid #000033",
-                   display: "flex",
-                   padding: "10px",
-                 }}
-               >
-                 <div
-                   className="col-md-3"
-                   style={{ fontSize: "24px", fontFamily: "Poppins" }}
-                 >
-                   channels
-                 </div>
-                 <div className="col-md-9 d-flex" style={textStyle}>
-                  
-                    <div className="col-md-4"> Tx Index</div>
-                    <div>on</div>
-                 </div>
-               </li>{" "}
-               <li
-                 style={{
-                   borderBottom:
-                   theme === "light"
-                     ? "1px solid rgba(235,235,235,1)"
-                     : "1px solid #000033",
-                   display: "flex",
-                   padding: "10px",
-                 }}
-               >
-                 <div
-                   className="col-md-3"
-                   style={{ fontSize: "24px", fontFamily: "Poppins" }}
-                 >
-                  other
-                 </div>
-                 <div className="col-md-9 d-flex" style={textStyle}>
-                  
-                    <div className="col-md-4"> Rpc Address</div>
-                    <div>tcp://0.0.0:26657</div>
-                   
-                 </div>
-               </li>{" "}
-             </ul>
+        <div
+          className={
+            theme === "light" ? "scrollbar-list" : "scrollbar-list-black"
+          }
+        >
+          <ul>
+            <li
+              style={{
+                display: "flex",
+                padding: "10px",
+              }}
+            >
+              <div
+                className="col-md-3"
+                style={{ fontSize: "24px", fontFamily: "Poppins" }}
+              ></div>
+              <div className="col-md-9" style={textStyle}>
+                <div
+                  className="d-flex flex-direction-row"
+                  style={{
+                    borderBottom:
+                      theme === "light"
+                        ? "1px solid rgba(235,235,235,1)"
+                        : "1px solid rgba(22,22,63,1)",
+                  }}
+                >
+                  <div className="col-md-4">P2p</div>
+                  <div>8</div>
+                </div>
+              </div>
+            </li>
+            <li
+              style={{
+                display: "flex",
+                padding: "10px",
+              }}
+            >
+              <div
+                className="col-md-3"
+                style={{ fontSize: "24px", fontFamily: "Poppins" }}
+              ></div>
+              <div className="col-md-9" style={textStyle}>
+                <div
+                  className="d-flex flex-direction-row"
+                  style={{
+                    borderBottom:
+                      theme === "light"
+                        ? "1px solid rgba(235,235,235,1)"
+                        : "1px solid rgba(22,22,63,1)",
+                  }}
+                >
+                  <div className="col-md-4">Block</div>
+                  <div>11</div>
+                </div>
+              </div>
+            </li>{" "}
+            <li
+              style={{
+                display: "flex",
+                padding: "10px",
+              }}
+            >
+              <div
+                className="col-md-3"
+                style={{ fontSize: "24px", fontFamily: "Poppins" }}
+              ></div>
+              <div className="col-md-9" style={textStyle}>
+                <div
+                  className="d-flex flex-direction-row"
+                  style={{
+                    borderBottom:
+                      theme === "light"
+                        ? "1px solid rgba(235,235,235,1)"
+                        : "1px solid rgba(22,22,63,1)",
+                  }}
+                >
+                  <div className="col-md-4">App</div>
+                  <div>15</div>
+                </div>
+              </div>
+            </li>
+            <li
+              style={{
+                borderBottom:
+                  theme === "light"
+                    ? "1px solid rgba(235,235,235,1)"
+                    : "1px solid rgba(22,22,63,1)",
+                display: "flex",
+                padding: "10px",
+              }}
+            >
+              <div
+                className="col-md-3"
+                style={{ fontSize: "24px", fontFamily: "Poppins" }}
+              >
+                default_node_id
+              </div>
+              <div className="col-md-9" style={textStyle}>
+                49802f6924730718069ad5aa18ffq55q1827699e
+              </div>
+            </li>{" "}
+            <li
+              style={{
+                borderBottom:
+                  theme === "light"
+                    ? "1px solid rgba(235,235,235,1)"
+                    : "1px solid rgba(22,22,63,1)",
+                display: "flex",
+                padding: "10px",
+              }}
+            >
+              <div
+                className="col-md-3"
+                style={{ fontSize: "24px", fontFamily: "Poppins" }}
+              >
+                listen_addr
+              </div>
+              <div className="col-md-9" style={textStyle}>
+                144.126.222.208.31311
+              </div>
+            </li>{" "}
+            <li
+              style={{
+                borderBottom:
+                  theme === "light"
+                    ? "1px solid rgba(235,235,235,1)"
+                    : "1px solid rgba(22,22,63,1)",
+                display: "flex",
+                padding: "10px",
+              }}
+            >
+              <div
+                className="col-md-3"
+                style={{ fontSize: "24px", fontFamily: "Poppins" }}
+              >
+                network
+              </div>
+              <div className="col-md-9" style={textStyle}>
+                osmosis-1
+              </div>
+            </li>
+            <li
+              style={{
+                borderBottom:
+                  theme === "light"
+                    ? "1px solid rgba(235,235,235,1)"
+                    : "1px solid #000033",
+                display: "flex",
+                padding: "10px",
+              }}
+            >
+              <div
+                className="col-md-3"
+                style={{ fontSize: "24px", fontFamily: "Poppins" }}
+              >
+                channels
+              </div>
+              <div className="col-md-9" style={textStyle}>
+                QCahillMwOGBhAA==
+              </div>
+            </li>{" "}
+            <li
+              style={{
+                borderBottom:
+                  theme === "light"
+                    ? "1px solid rgba(235,235,235,1)"
+                    : "1px solid rgba(22,22,63,1)",
+                display: "flex",
+                padding: "10px",
+              }}
+            >
+              <div
+                className="col-md-3"
+                style={{ fontSize: "24px", fontFamily: "Poppins" }}
+              >
+                channels
+              </div>
+              <div className="col-md-9 d-flex" style={textStyle}>
+                <div className="col-md-4"> Tx Index</div>
+                <div>on</div>
+              </div>
+            </li>{" "}
+            <li
+              style={{
+                borderBottom:
+                  theme === "light"
+                    ? "1px solid rgba(235,235,235,1)"
+                    : "1px solid rgba(22,22,63,1)",
+                display: "flex",
+                padding: "10px",
+              }}
+            >
+              <div
+                className="col-md-3"
+                style={{ fontSize: "24px", fontFamily: "Poppins" }}
+              >
+                other
+              </div>
+              <div className="col-md-9 d-flex" style={textStyle}>
+                <div className="col-md-4"> Rpc Address</div>
+                <div>tcp://0.0.0:26657</div>
+              </div>
+            </li>{" "}
+        
+          </ul>
         </div>
       </div>
     </div>

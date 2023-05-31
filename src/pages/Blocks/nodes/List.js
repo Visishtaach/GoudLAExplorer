@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import path from "../../../assets/Blocks/Arrows Dark.svg";
+import path from "../../../assets/Blocks/Nodes Dark.svg";
 import { ThemeContext } from "../../../themecontext/ThemeContext";
 import lightNode from "../../../assets/Blocks/Nodes Light.svg";
 

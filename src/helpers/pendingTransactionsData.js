@@ -9,7 +9,7 @@ export const pendingTransactionsData = [
     gasprice: "3.6Goud",
     from: "n_3AA16771D558_vi",
     to: "n_3AA16771D558_vi",
-    value: "0GOud",
+    value: "0Goud",
   },
   {
     id: 1,
@@ -21,7 +21,7 @@ export const pendingTransactionsData = [
     gasprice: "3.6Goud",
     from: "n_3AA16771D558_vi",
     to: "n_3AA16771D558_vi",
-    value: "0GOud",
+    value: "0Goud",
   }, {
     id: 1,
     txnHash: "n_a12cabcbed6b..",
@@ -32,7 +32,7 @@ export const pendingTransactionsData = [
     gasprice: "3.6Goud",
     from: "n_3AA16771D558_vi",
     to: "n_3AA16771D558_vi",
-    value: "0GOud",
+    value: "0Goud",
   }, {
     id: 1,
     txnHash: "n_a12cabcbed6b..",
@@ -43,7 +43,7 @@ export const pendingTransactionsData = [
     gasprice: "3.6Goud",
     from: "n_3AA16771D558_vi",
     to: "n_3AA16771D558_vi",
-    value: "0GOud",
+    value: "0Goud",
   }, {
     id: 1,
     txnHash: "n_a12cabcbed6b..",
@@ -54,7 +54,7 @@ export const pendingTransactionsData = [
     gasprice: "3.6Goud",
     from: "n_3AA16771D558_vi",
     to: "n_3AA16771D558_vi",
-    value: "0GOud",
+    value: "0Goud",
   }, {
     id: 1,
     txnHash: "n_a12cabcbed6b..",
@@ -65,7 +65,7 @@ export const pendingTransactionsData = [
     gasprice: "3.6Goud",
     from: "n_3AA16771D558_vi",
     to: "n_3AA16771D558_vi",
-    value: "0GOud",
+    value: "0Goud",
   }, {
     id: 1,
     txnHash: "n_a12cabcbed6b..",
@@ -76,7 +76,7 @@ export const pendingTransactionsData = [
     gasprice: "3.6Goud",
     from: "n_3AA16771D558_vi",
     to: "n_3AA16771D558_vi",
-    value: "0GOud",
+    value: "0Goud",
   }, {
     id: 1,
     txnHash: "n_a12cabcbed6b..",
@@ -87,7 +87,7 @@ export const pendingTransactionsData = [
     gasprice: "3.6Goud",
     from: "n_3AA16771D558_vi",
     to: "n_3AA16771D558_vi",
-    value: "0GOud",
+    value: "0Goud",
   }, {
     id: 1,
     txnHash: "n_a12cabcbed6b..",
@@ -98,7 +98,7 @@ export const pendingTransactionsData = [
     gasprice: "3.6Goud",
     from: "n_3AA16771D558_vi",
     to: "n_3AA16771D558_vi",
-    value: "0GOud",
+    value: "0Goud",
   }, {
     id: 1,
     txnHash: "n_a12cabcbed6b..",
@@ -109,7 +109,7 @@ export const pendingTransactionsData = [
     gasprice: "3.6Goud",
     from: "n_3AA16771D558_vi",
     to: "n_3AA16771D558_vi",
-    value: "0GOud",
+    value: "0Goud",
   }, {
     id: 1,
     txnHash: "n_a12cabcbed6b..",
@@ -120,7 +120,7 @@ export const pendingTransactionsData = [
     gasprice: "3.6Goud",
     from: "n_3AA16771D558_vi",
     to: "n_3AA16771D558_vi",
-    value: "0GOud",
+    value: "0Goud",
   }, {
     id: 1,
     txnHash: "n_a12cabcbed6b..",
@@ -131,7 +131,7 @@ export const pendingTransactionsData = [
     gasprice: "3.6Goud",
     from: "n_3AA16771D558_vi",
     to: "n_3AA16771D558_vi",
-    value: "0GOud",
+    value: "0Goud",
   }, {
     id: 1,
     txnHash: "n_a12cabcbed6b..",
@@ -142,7 +142,7 @@ export const pendingTransactionsData = [
     gasprice: "3.6Goud",
     from: "n_3AA16771D558_vi",
     to: "n_3AA16771D558_vi",
-    value: "0GOud",
+    value: "0Goud",
   }, {
     id: 1,
     txnHash: "n_a12cabcbed6b..",
@@ -153,6 +153,6 @@ export const pendingTransactionsData = [
     gasprice: "3.6Goud",
     from: "n_3AA16771D558_vi",
     to: "n_3AA16771D558_vi",
-    value: "0GOud",
+    value: "0Goud",
   },
 ];

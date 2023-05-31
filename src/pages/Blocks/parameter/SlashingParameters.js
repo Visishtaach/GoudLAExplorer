@@ -7,8 +7,8 @@ const SlashingParameters = () => {
         Slashing Parameters
     </div>
 
-    <div className="d-flex" style={{ gap: "20px", paddingTop: "20px" }}>
-      <div
+    <div className="d-flex flex-wrap" style={{ gap: "20px", paddingTop: "20px",  }}>
+      <div  className='responsive-card'
         style={{
           width: "auto",
           height: "146px",
@@ -19,9 +19,11 @@ const SlashingParameters = () => {
           justifyContent: "start",
           alignItems: "start",
           flexDirection: "column",
+          overflow:'hidden'
         }}
       >
-        <div style={{ fontSize: "21px", fontFamily: "Poppins" }}>
+        <div style={{ fontSize: "21px", fontFamily: "Poppins",overflow: "hidden",
+      textOverflow: "ellipsis", }}>
           signed_blocks_window
         </div>
         <div
@@ -34,7 +36,7 @@ const SlashingParameters = () => {
           30000
         </div>
       </div>
-      <div
+      <div  className='responsive-card'
         style={{
           width: "auto",
           height: "146px",
@@ -45,9 +47,11 @@ const SlashingParameters = () => {
           justifyContent: "start",
           alignItems: "start",
           flexDirection: "column",
+          overflow:'hidden'
         }}
       >
-        <div style={{ fontSize: "21px", fontFamily: "Poppins" }}>
+        <div style={{ fontSize: "21px", fontFamily: "Poppins",overflow: "hidden",
+      textOverflow: "ellipsis", }}>
           min_signed_per_window
         </div>
         <div
@@ -60,7 +64,7 @@ const SlashingParameters = () => {
           5%
         </div>
       </div>
-      <div
+      <div  className='responsive-card'
         style={{
           width: "auto",
           height: "146px",
@@ -71,9 +75,11 @@ const SlashingParameters = () => {
           justifyContent: "start",
           alignItems: "start",
           flexDirection: "column",
+          overflow:'hidden'
         }}
       >
-        <div style={{ fontSize: "21px", fontFamily: "Poppins" }}>
+        <div style={{ fontSize: "21px", fontFamily: "Poppins",overflow: "hidden",
+      textOverflow: "ellipsis", }}>
           downtime_jail_duration
         </div>
         <div
@@ -89,8 +95,8 @@ const SlashingParameters = () => {
       </div>
      
     </div>
-    <div className="d-flex" style={{ gap: "20px", paddingTop: "20px" }}>
-    <div
+    <div className="d-flex flex-wrap" style={{ gap: "20px", paddingTop: "20px" }}>
+    <div  className='responsive-card'
         style={{
           width: "auto",
           height: "146px",
@@ -101,9 +107,11 @@ const SlashingParameters = () => {
           justifyContent: "start",
           alignItems: "start",
           flexDirection: "column",
+          overflow:'hidden'
         }}
       >
-        <div style={{ fontSize: "21px", fontFamily: "Poppins" }}>
+        <div style={{ fontSize: "21px", fontFamily: "Poppins",overflow: "hidden",
+      textOverflow: "ellipsis", }}>
           slash_Fraction_double_sign
         </div>
         <div
@@ -117,7 +125,7 @@ const SlashingParameters = () => {
          5%
         </div>
       </div>
-      <div
+      <div  className='responsive-card'
         style={{
           width: "auto",
           height: "146px",
@@ -128,9 +136,11 @@ const SlashingParameters = () => {
           justifyContent: "start",
           alignItems: "start",
           flexDirection: "column",
+          overflow:'hidden'
         }}
       >
-        <div style={{ fontSize: "21px", fontFamily: "Poppins" }}>
+        <div style={{ fontSize: "21px", fontFamily: "Poppins",overflow: "hidden",
+      textOverflow: "ellipsis", }}>
           slash_fraction_downtime
         </div>
         <div

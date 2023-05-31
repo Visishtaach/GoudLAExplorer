@@ -38,21 +38,6 @@ const labels = [
   "Dec",
 ];
 
-// export const data = {
-//   labels,
-//   datasets: [
-//     {
-//       label: "price",
-//       data: [11, 35, 30, 33, 23, 50, 17, 46, 32, 16, 13, 8],
-//       borderColor: "rgba(139,86,163,1)",
-//       backgroundColor: "rgba(139,86,163,1)",
-//       tension: 0.4,
-//       borderWidth: 1,
-
-//       //    pointBorderWidth:3
-//     },
-//   ],
-// };
 const titleTooltip = (item) => {
   return "";
 };
@@ -61,116 +46,6 @@ const labelTooltip = (item) => {
   console.log(item.raw);
   return `$${item.raw}`;
 };
-// export const options = {
-//   responsive: true,
-//   maintainAspectRatio: false,
-//   interaction: {
-//     mode: "index",
-//     intersect: false,
-//   },
-
-//   elements: {
-//     point: {
-//       radius: 0,
-//     },
-//   },
-//   plugins: {
-//     legend: {
-//       display: false,
-//     },
-//     tooltip: {
-//       mode: "index",
-//       intersect: false,
-//       yAlign: "bottom",
-//       displayColors: false,
-//       callbacks: {
-//         title: titleTooltip,
-//         label: labelTooltip,
-//       },
-//       backgroundColor: "rgba(139,86,163,1)",
-//       bodyFontColor: "white",
-//       bodyFont: {
-//         family: "poppins",
-//         size: "14px",
-//         // weight:'bold'
-//       },
-//     },
-//     hover: {
-//       mode: "nearest",
-//       intersect: true,
-//     },
-//   },
-//   scales: {
-//     x: {
-//       grid: {
-//         display: false,
-//       },
-//     },
-
-//     y: {
-//       border: {
-//         dash: (ctx) => {
-//           const firstTick = 0;
-//           if (ctx.index === firstTick) {
-//             return null;
-//           } else {
-//             // return [3, 4];
-//             const { theme } = useContext(ThemeContext);
-
-//             if (theme === "dark") {
-//               return null; // Remove dashes in dark mode
-//             } else {
-//               return [3, 4]; // Show dashes in light theme
-//             }
-//           }
-
-//         },
-//         color: "gray",
-//         display: false,
-//       },
-
-//       grid: {
-//         color: (ctx) => {
-//           const firstTick = 0;
-//           if (ctx.index === firstTick) {
-//             return "skyblue";
-//           } else {
-//             return "#DEDEDE";
-//           }
-//         },
-//         drawBorder: false,
-//         tickBorderDash: [2, 3],
-//       },
-//       beginAtZero: false,
-//       min: 0,
-//       max: 50,
-//       ticks: {
-//         stepSize: 10,
-//       },
-//     },
-//   },
-// };
-
-// const arbitaryLine = {
-//   id: "arbitaryLine",
-//   beforeDatasetsDraw(chart, args, plugins) {
-//     const {
-//       ctx,
-//       chartArea: { top, bottom },
-//       scales: { x },
-//     } = chart;
-//     ctx.save();
-
-//     ctx.beginPath();
-//     ctx.lineWidth = 1;
-//     ctx.strokeStyle = "rgba(74,164,220,1)";
-//     ctx.setLineDash([6, 6]);
-//     ctx.moveTo(x.getPixelForValue(6), top);
-//     ctx.lineTo(x.getPixelForValue(6), bottom);
-//     ctx.stroke();
-//     ctx.restore();
-//   },
-// };
 
 const LineChart = () => {
   const { theme } = useContext(ThemeContext);

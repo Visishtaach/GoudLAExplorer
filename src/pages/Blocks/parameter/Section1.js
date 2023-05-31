@@ -7,7 +7,7 @@ import StakingParameters from "./StakingParameters";
 const Section1 = () => {
   const { theme } = useContext(ThemeContext);
   return (
-    <div
+    <div className="container-sm"
       style={{
         padding: "20px 20px",
         backgroundColor: theme === "light" ? "white" : "rgb(0, 0, 51)",
@@ -22,15 +22,15 @@ const Section1 = () => {
             : "1px solid #000033",
       }}
     >
-      <div style={{ paddingTop: "40px"  }}>
+      <div className="container-fluid" style={{ paddingTop: "40px"  }}>
         <p style={{ fontSize: "24px", fontFamily: "Poppins" }}>
           Chain ID Osmosis1
         </p>
 
-        <div className="d-flex" style={{ gap: "20px", paddingTop: "20px" }}>
+        <div className="d-flex flex-wrap " style={{ gap: "20px", paddingTop: "20px" }}>
           <div
             style={{
-              width: "294px",
+              width: "286px",
               height: "146px",
               border: "1px solid rgba(128,99,172,1)",
               borderRadius: "15px",
@@ -41,7 +41,7 @@ const Section1 = () => {
               flexDirection: "column",
             }}
           >
-            <div style={{ fontSize: "21px", fontFamily: "Poppins" }}>
+            <div style={{ fontSize: "21px", fontFamily: "Poppins" }} className="responsive-card">
               height
             </div>
             <div
@@ -54,9 +54,9 @@ const Section1 = () => {
               9785442
             </div>
           </div>
-          <div
+          <div className="responsive-card"
             style={{
-              width: "294px",
+             width: "286px",
               height: "146px",
               border: "1px solid rgba(128,99,172,1)",
               borderRadius: "15px",
@@ -65,9 +65,10 @@ const Section1 = () => {
               justifyContent: "start",
               alignItems: "start",
               flexDirection: "column",
+              
             }}
           >
-            <div style={{ fontSize: "21px", fontFamily: "Poppins" }}>
+            <div style={{ fontSize: "21px", fontFamily: "Poppins", }}>
               bonded_and_supply
             </div>
             <div
@@ -80,9 +81,9 @@ const Section1 = () => {
               256M/586
             </div>
           </div>
-          <div
+          <div className="responsive-card"
             style={{
-              width: "294px",
+              width: "286px",
               height: "146px",
               border: "1px solid rgba(128,99,172,1)",
               borderRadius: "15px",
@@ -91,6 +92,7 @@ const Section1 = () => {
               justifyContent: "start",
               alignItems: "start",
               flexDirection: "column",
+              overflow: "hidden"
             }}
           >
             <div style={{ fontSize: "21px", fontFamily: "Poppins" }}>
@@ -102,14 +104,16 @@ const Section1 = () => {
                 fontFamily: "Avenir",
                 paddingTop: "20px",
                 paddingLeft: "20px",
+                overflow:'hidden',
+                textOverflow:'ellipsis'
               }}
             >
               43.64%
             </div>
           </div>
-          <div
+          <div className="responsive-card"
             style={{
-              width: "294px",
+              width: "286px",
               height: "146px",
               border: "1px solid rgba(128,99,172,1)",
               borderRadius: "15px",
@@ -138,7 +142,7 @@ const Section1 = () => {
         </div>
       </div>
       <StakingParameters/>
-     <GovernaneParameters />
+     {/* <GovernaneParameters /> */}
      <DistributionParameters />
      <SlashingParameters/>
     </div>

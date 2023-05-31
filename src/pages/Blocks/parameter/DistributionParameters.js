@@ -7,8 +7,8 @@ const DistributionParameters = () => {
       Distribution Parameters
     </p>
 
-    <div className="d-flex" style={{ gap: "20px", paddingTop: "20px" }}>
-      <div
+    <div className="d-flex flex-wrap" style={{ gap: "20px", paddingTop: "20px" }}>
+      <div  className='responsive-card'
         style={{
           width: "294px",
           height: "146px",
@@ -19,9 +19,11 @@ const DistributionParameters = () => {
           justifyContent: "start",
           alignItems: "start",
           flexDirection: "column",
+          overflow:'hidden'
         }}
       >
-        <div style={{ fontSize: "21px", fontFamily: "Poppins" }}>
+        <div style={{ fontSize: "21px", fontFamily: "Poppins",textOverflow: "ellipsis",
+              overflow: "hidden", }}>
           community_tax
         </div>
         <div
@@ -34,7 +36,7 @@ const DistributionParameters = () => {
           0
         </div>
       </div>
-      <div
+      <div  className='responsive-card'
         style={{
           width: "294px",
           height: "146px",
@@ -45,9 +47,11 @@ const DistributionParameters = () => {
           justifyContent: "start",
           alignItems: "start",
           flexDirection: "column",
+          overflow:'hidden'
         }}
       >
-        <div style={{ fontSize: "21px", fontFamily: "Poppins" }}>
+        <div style={{ fontSize: "21px", fontFamily: "Poppins",textOverflow: "ellipsis",
+              overflow: "hidden", }}>
           base_proposer_reward
         </div>
         <div
@@ -60,7 +64,7 @@ const DistributionParameters = () => {
           0
         </div>
       </div>
-      <div
+      <div  className='responsive-card'
         style={{
           width: "294px",
           height: "146px",
@@ -71,6 +75,8 @@ const DistributionParameters = () => {
           justifyContent: "start",
           alignItems: "start",
           flexDirection: "column",
+          overflow:'hidden',textOverflow: "ellipsis",
+        
         }}
       >
         <div style={{ fontSize: "21px", fontFamily: "Poppins" }}>
@@ -87,7 +93,7 @@ const DistributionParameters = () => {
           0
         </div>
       </div>
-      <div
+      <div  className='responsive-card'
         style={{
           width: "294px",
           height: "146px",
@@ -98,6 +104,7 @@ const DistributionParameters = () => {
           justifyContent: "start",
           alignItems: "start",
           flexDirection: "column",
+              overflow: "hidden",
         }}
       >
         <div style={{ fontSize: "21px", fontFamily: "Poppins" }}>

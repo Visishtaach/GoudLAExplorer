@@ -143,7 +143,9 @@ const TransactionsTable = ({ activeNodes }) => {
                      
                         {" "}
                         <img src={eye} alt="icon" style={{ 
-                      border: "1px solid rgba(22,22,63,1)",
+                      border:  theme === "light"
+                      ? "1px solid rgba(235,235,235,1)"
+                      : "1px solid rgba(22,22,63,1)",
                       borderRadius: "5px",
                      
                       width:'30px',

@@ -29,7 +29,7 @@
   border-color: rgba(139, 86, 163, 1);
   text-transform: uppercase;
 }
-
+/* scrollbar light parameters section2  */
 .scrollbar-list {
   list-style: none;
   max-height: 500px;
@@ -42,15 +42,24 @@
 }
 
 .scrollbar-list::-webkit-scrollbar-track {
-  background-color: #ffffff;
+  background-color: rgb(128, 128, 153);
+  border-radius: 10px;
 }
 
 .scrollbar-list::-webkit-scrollbar-thumb {
   background-color: rgb(128, 128, 153);
   background-image: linear-gradient(to bottom, rgb(0, 126, 167) 15%, rgb(128, 128, 153) 25%);
   border-radius: 10px;
+  transition: background-position 0.3s;
 }
 
+/*ends-----------------here*/
+
+
+
+
+
+/* scrollbar black parameters */
 
 .scrollbar-list-black {
   list-style: none;
@@ -64,15 +73,18 @@
 }
 
 .scrollbar-list-black::-webkit-scrollbar-track {
-  background-color:rgba(0,0,51,1);
-}
-
-.scrollbar-list-black::-webkit-scrollbar-thumb {
-  background-color: rgba(0,0,51,1);
-  
+  background-color:#808099;
   border-radius: 10px;
 }
 
+.scrollbar-list-black::-webkit-scrollbar-thumb {
+  background-color: #808099;
+  background-image: linear-gradient(to bottom, rgb(0, 126, 167) 20%, rgb(128, 128, 153) 20%);
+  border-radius: 10px;
+}
+/* ------------------- list1 black ended ----------------*/
+
+/*scrollbar list2 light*/
 .scroll-list {
   list-style: none;
   max-height: 150px;
@@ -85,7 +97,8 @@
 }
 
 .scroll-list::-webkit-scrollbar-track {
-  background-color:#ffff;
+  background-color:rgb(128, 128, 153);
+  border-radius: 10px;
 }
 
 .scroll-list::-webkit-scrollbar-thumb {
@@ -93,7 +106,9 @@
   background-image: linear-gradient(to bottom, rgb(0, 126, 167) 20%, rgb(128, 128, 153) 20%);
   border-radius: 5px;
 }
+/* ------------------- list2 light ended ----------------*/
 
+/*list2 black */
 .scroll-list-black {
   list-style: none;
   max-height: 150px;
@@ -106,12 +121,13 @@
 }
 
 .scroll-list-black::-webkit-scrollbar-track {
-  background-color :rgba(0,0,51,1);
+  background-color :#808099;
+  border-radius: 10px;
 }
 
 .scroll-list-black::-webkit-scrollbar-thumb {
-  background-color:  rgba(0,0,51,1);
-  /* background-image: linear-gradient(to bottom, rgb(0, 126, 167) 20%, rgb(128, 128, 153) 20%); */
+  /* background-color:  rgba(0,0,51,1); */
+  background-image: linear-gradient(to bottom, rgb(0, 126, 167) 20%, rgb(128, 128, 153) 20%);
   border-radius: 5px;
 }
 
