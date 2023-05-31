@@ -1,11 +1,11 @@
 import React, { useState, useContext } from "react";
-import { ThemeContext } from "../../themecontext/ThemeContext";
+import { ThemeContext } from "../../../themecontext/ThemeContext";
 import { NavLink } from "react-bootstrap";
-import Header from "../layout/Header";
-import SearchField from "../layout/SearchField";
-import { activeNodesList } from "../../NodeList";
-import List from "../../UI/List";
-import Footer from "../layout/Footer";
+import Header from "../../../components/layout/Header";
+import SearchField from "../../../components/layout/SearchField";
+import { activeNodesList } from "../../../helpers/NodeList";
+import List from "./List";
+import Footer from "../../../components/layout/Footer";
 
 
 const Nodes = () => {

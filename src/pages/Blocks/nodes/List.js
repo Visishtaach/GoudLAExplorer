@@ -1,11 +1,10 @@
 import React, { useContext } from "react";
-import { FaCheck, FaTimes } from "react-icons/fa"; // Example: Using Font Awesome icons
-import path from "../assets/Blocks/Nodes Dark.svg";
-import { ThemeContext } from "../themecontext/ThemeContext";
-import lightNode from '../assets/Blocks/Nodes Light.svg'
+import path from "../../../assets/Blocks/Arrows Dark.svg";
+import { ThemeContext } from "../../../themecontext/ThemeContext";
+import lightNode from "../../../assets/Blocks/Nodes Light.svg";
 
 const List = ({ activeNodes }) => {
-  const {theme} = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
   return (
     <div className="table-responsive pt-5">
       <table
@@ -19,7 +18,6 @@ const List = ({ activeNodes }) => {
           <tr
             style={{
               color: theme === "light" ? "black" : "rgba(225,225,225,1)",
-              //   border:theme ==="light"? "gray" : "",
               textAlign: "right",
               alignItems: "center",
               justifyContent: "center",
@@ -31,7 +29,7 @@ const List = ({ activeNodes }) => {
                 fontSize: "24px",
                 fontFamily: "Poppins",
                 fontWeight: "normal",
-                paddingBottom:'20px'
+                paddingBottom: "20px",
               }}
             >
               # Validator
@@ -43,7 +41,7 @@ const List = ({ activeNodes }) => {
                 fontSize: "24px",
                 fontFamily: "Poppins",
                 fontWeight: "normal",
-                paddingBottom:'20px'
+                paddingBottom: "20px",
               }}
             >
               Voting Power
@@ -53,7 +51,7 @@ const List = ({ activeNodes }) => {
                 fontSize: "24px",
                 fontFamily: "Poppins",
                 fontWeight: "normal",
-                paddingBottom:'20px'
+                paddingBottom: "20px",
               }}
             >
               24H Changes
@@ -63,7 +61,7 @@ const List = ({ activeNodes }) => {
                 fontSize: "24px",
                 fontFamily: "Poppins",
                 fontWeight: "normal",
-                paddingBottom:'20px'
+                paddingBottom: "20px",
               }}
             >
               Commission
@@ -73,7 +71,7 @@ const List = ({ activeNodes }) => {
                 fontSize: "24px",
                 fontFamily: "Poppins",
                 fontWeight: "normal",
-                paddingBottom:'20px'
+                paddingBottom: "20px",
               }}
             >
               Actions
@@ -87,10 +85,9 @@ const List = ({ activeNodes }) => {
               style={{
                 color: theme === "light" ? "black" : "rgba(225,225,225,1)",
                 textAlign: "right",
-                
               }}
             >
-              <td style={{paddingTop:'25px'}}>
+              <td style={{ paddingTop: "25px" }}>
                 <div style={{ display: "flex", gap: "25px" }}>
                   <p style={{ fontFamily: "Avenir", fontSize: "24px" }}>
                     {" "}
@@ -98,7 +95,7 @@ const List = ({ activeNodes }) => {
                   </p>
                   <p style={{ display: "flex", gap: "10px" }}>
                     {" "}
-                    <img src={theme === "light" ? lightNode: path} />
+                    <img src={theme === "light" ? lightNode : path} />
                     <span style={{ fontSize: "24px", fontFamily: "Poppins" }}>
                       {node.validator}
                     </span>
@@ -106,7 +103,7 @@ const List = ({ activeNodes }) => {
                 </div>
               </td>
 
-              <td style={{ paddingRight: "5px", paddingTop:'25px' }}>
+              <td style={{ paddingRight: "5px", paddingTop: "25px" }}>
                 <div
                   style={{
                     display: "flex",
@@ -123,11 +120,17 @@ const List = ({ activeNodes }) => {
                   </p>
                 </div>
               </td>
-              <td style={{paddingTop:'25px'}}></td>
-              <td style={{ fontSize: "24px", fontFamily: "Avenir", paddingTop:'25px' }}>
+              <td style={{ paddingTop: "25px" }}></td>
+              <td
+                style={{
+                  fontSize: "24px",
+                  fontFamily: "Avenir",
+                  paddingTop: "25px",
+                }}
+              >
                 {node.commission}
               </td>
-              <td style={{paddingTop:'25px'}}>
+              <td style={{ paddingTop: "25px" }}>
                 <div
                   style={{
                     backgroundColor:
@@ -136,7 +139,6 @@ const List = ({ activeNodes }) => {
                         : "#D45857",
                     display: "inline-flex",
                     height: "34px",
-                    // padding:'5px',
                     textAlign: "center",
                     alignItems: "center",
                     width: "134px",
@@ -144,8 +146,8 @@ const List = ({ activeNodes }) => {
                     borderRadius: "5px",
                     fontSize: "16px",
                     fontFamily: "Poppins",
-                    textTransform:'capitalize',
-                    color: "white"
+                    textTransform: "capitalize",
+                    color: "white",
                   }}
                 >
                   {node.action}

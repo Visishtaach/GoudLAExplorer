@@ -121,8 +121,7 @@ const GraphSection = () => {
           borderRadius: "15px",
           color: theme === "light" ? "black" : "white",
           height: "auto",
-        //  boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
-        border: theme==="light" ? "1px solid rgba(235,235,235,1)" : "1px solid #000033"
+          border: theme==="light" ? "1px solid rgba(235,235,235,1)" : "1px solid #000033"
         }}
       >
         <div

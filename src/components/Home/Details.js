@@ -4,7 +4,6 @@ import profit from "../../assets/Group_221.png";
 import cap from "../../assets/Icons/cap.svg";
 import price from "../../assets/Icons/price.svg";
 import { ThemeContext } from "../../themecontext/ThemeContext";
-import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
@@ -20,9 +19,10 @@ const Details = () => {
           borderRadius: "15px",
           color: theme === "light" ? "black" : "white",
           height: "auto",
-          border: theme==="light" ? "1px solid rgba(235,235,235,1)" : "1px solid #000033"
-        //  boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
-          //  margin:'20px'
+          border:
+            theme === "light"
+              ? "1px solid rgba(235,235,235,1)"
+              : "1px solid #000033",
         }}
       >
         <Row>
@@ -48,13 +48,11 @@ const Details = () => {
                 flexDirection: "row",
                 alignItems: "center",
                 gap: "8px",
-                //   padding: "10px",
               }}
             >
               <img
                 src={price}
                 style={{
-                  // marginBottom: "10px",
                   width: "29.637px",
                   heigth: "29.984px",
                 }}
@@ -129,9 +127,6 @@ const Details = () => {
                 display: "flex",
                 flexDirection: "row",
                 alignItems: "center",
-                // gap: "px",
-                //   padding: "10px",
-                // justifyContent:'center',
               }}
             >
               <div>
@@ -145,40 +140,39 @@ const Details = () => {
                 >
                   Transactions
                   <span>
-                  <div
-                    style={{
-                      fontFamily: "Avenir",
-                      fontSize: "16px",
-                      color:
-                        theme === "light"
-                          ? "rgba(0,0,21,1)"
-                          : "rgba(255,255,255,1)",
-                    }}
-                  >
-                    5,266.66.M <span
-                    style={{
-                      fontFamily: "Avenir",
-                      fontSize: "16px",
-                      color: "rgba(127,127,152,1)",
-                    }}
-                  >
-                    {" "}
-                    (89.0 <span
-                    style={{
-                      fontFamily: "Poppins",
-                      fontSize: "16px",
-                      color: "rgba(127,127,152,1)",
-                    }}
-                  >
-                    TPS)
+                    <div
+                      style={{
+                        fontFamily: "Avenir",
+                        fontSize: "16px",
+                        color:
+                          theme === "light"
+                            ? "rgba(0,0,21,1)"
+                            : "rgba(255,255,255,1)",
+                      }}
+                    >
+                      5,266.66.M{" "}
+                      <span
+                        style={{
+                          fontFamily: "Avenir",
+                          fontSize: "16px",
+                          color: "rgba(127,127,152,1)",
+                        }}
+                      >
+                        {" "}
+                        (89.0{" "}
+                        <span
+                          style={{
+                            fontFamily: "Poppins",
+                            fontSize: "16px",
+                            color: "rgba(127,127,152,1)",
+                          }}
+                        >
+                          TPS)
+                        </span>
+                      </span>{" "}
+                    </div>{" "}
                   </span>
-                  </span>{" "}
-                  </div>{" "}
-                 
-                  
-                </span>
                 </div>
-                
               </div>
             </div>
           </Col>
@@ -202,9 +196,6 @@ const Details = () => {
                 display: "flex",
                 flexDirection: "row",
                 alignItems: "center",
-                // gap: "3px",
-                // padding: "10px",
-                // justifyContent:'center',
               }}
             >
               <div>
@@ -216,31 +207,31 @@ const Details = () => {
                     color: "rgba(127,127,152,1)",
                   }}
                 >
-                  Bonded <div>
-                  <div
-                    style={{
-                      fontFamily: "Poppins",
-                      fontSize: "16px",
-                      color:
-                        theme === "light"
-                          ? "rgba(0,0,21,1)"
-                          : "rgba(225,225,225,1)",
-                    }}
-                  >
-                    3Gwei
-                  </div>{" "}
-                  <div
-                    style={{
-                      fontFamily: "Avenir",
-                      fontSize: "16px",
-                      color: "rgba(127,127,152,1)",
-                    }}
-                  >
-                    ($0.02)
+                  Bonded{" "}
+                  <div>
+                    <div
+                      style={{
+                        fontFamily: "Poppins",
+                        fontSize: "16px",
+                        color:
+                          theme === "light"
+                            ? "rgba(0,0,21,1)"
+                            : "rgba(225,225,225,1)",
+                      }}
+                    >
+                      3Gwei
+                    </div>{" "}
+                    <div
+                      style={{
+                        fontFamily: "Avenir",
+                        fontSize: "16px",
+                        color: "rgba(127,127,152,1)",
+                      }}
+                    >
+                      ($0.02)
+                    </div>
                   </div>
                 </div>
-                </div>
-                
               </div>
             </div>
           </Col>
@@ -263,16 +254,11 @@ const Details = () => {
               style={{
                 display: "flex",
                 flexDirection: "row",
-                // alignItems: "center",
-                // gap: "3px",
-                // padding: "10px",
-                // justifyContent:'center',
               }}
             >
               <div>
                 <span
                   style={{
-                    // marginBottom: "10px",
                     fontFamily: "Poppins",
                     fontSize: "16px",
                     color: "rgba(127,127,152,1)",
@@ -303,7 +289,6 @@ const Details = () => {
                         theme === "light"
                           ? "rgba(0,0,21,1)"
                           : "rgba(225,225,225,1)",
-                      // padding: "10px",
                     }}
                   >
                     Goud
@@ -330,15 +315,12 @@ const Details = () => {
                 flexDirection: "row",
                 alignItems: "center",
                 gap: "8px",
-                //   padding: "10px",
-                // justifyContent:'center',
               }}
             >
               <img
                 src={fire}
                 alt="fire"
                 style={{
-                  // marginBottom: "10px",
                   width: "22.691px",
                   heigth: "30.26px",
                 }}
@@ -346,7 +328,6 @@ const Details = () => {
               <div>
                 <span
                   style={{
-                    // marginBottom: "10px",
                     fontFamily: "Poppins",
                     fontSize: "16px",
                     color: "rgba(127,127,152,1)",
@@ -464,24 +445,19 @@ const Details = () => {
               borderBottom: window.innerWidth < 700 ? "1px solid gray" : "none",
               paddingTop: "20px",
               paddingBottom: "20px",
-              // alignItems: "center",
-              // marginTop:'10px'
             }}
           >
             <div
               style={{
                 display: "flex",
                 flexDirection: "row",
-                // alignItems: "center",
-                // justifyContent: "center",
+
                 gap: "3px",
-                // textAlign: window.innerWidth < 1000 ? "center" : "left",
+
                 marginLeft:
                   window.innerWidth < 1000 && window.innerWidth > 800
                     ? "15px"
                     : " 0px",
-                // backgroundColor:'pink',
-                // textAlign:'center'
               }}
             >
               <div>
@@ -519,8 +495,7 @@ const Details = () => {
                   </div>
                 </div>
                 {/* <div> */}
-                 
-                  
+
                 {/* </div> */}
               </div>
             </div>
@@ -593,8 +568,7 @@ const Details = () => {
                 window.innerWidth > 1000 && theme === "light"
                   ? "2px solid rgba(235,235,235,1)"
                   : "1px solid rgba(22,22,63,1)",
-               
-              // paddingLeft: "4px",
+
               paddingTop: "20px",
               paddingBottom: "20px",
             }}
@@ -603,10 +577,9 @@ const Details = () => {
               style={{
                 display: "flex",
                 flexDirection: "row",
-                // justifyContent:'center',
+
                 alignItems: "center",
                 gap: "3px",
-                //  padding: "8px",
               }}
             >
               <div>
@@ -645,16 +618,12 @@ const Details = () => {
                 display: "flex",
                 flexDirection: "row",
                 alignItems: "center",
-                
-                // justifyContent:'center',
                 gap: "8px",
-                // padding: "20px",
               }}
             >
               <img
                 src={profit}
                 style={{
-                  // marginBottom: "10px",
                   width: "31.957px",
                   height: "31.937px",
                 }}
@@ -663,7 +632,6 @@ const Details = () => {
               <div>
                 <div
                   style={{
-                    // marginBottom: "10px",
                     fontFamily: "Poppins",
                     fontSize: "16px",
                     color: "rgba(127,127,152,1)",

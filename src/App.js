@@ -12,7 +12,7 @@ import "./App.css";
 import Home from "./components/layout/Home";
 import { ThemeContext } from "./themecontext/ThemeContext";
 import Boards from "./pages/Governance/Boards/Boards";
-import Nodes from "./components/Blocks/Nodes";
+import Nodes from "./pages/Blocks/nodes/Nodes";
 import Transaction from "./pages/Blocks/transactions/Transaction"
 import PendingTransaction from "./pages/Blocks/pending-transactions/PendingTransaction";
 import ViewBlocks from "./pages/Blocks/view-blocks/ViewBlocks";
