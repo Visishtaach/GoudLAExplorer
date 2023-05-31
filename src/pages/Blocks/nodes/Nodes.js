@@ -108,7 +108,7 @@ const Nodes = () => {
           <div
             style={{
               fontFamily: "Avenir",
-              color: "rgba(255,255,255,1)",
+              color:theme==="light"?"black": "rgba(255,255,255,1)",
               fontSize: "24px",
             }}
           >
