@@ -9,7 +9,7 @@ import method from '../../../assets/Blocks/method.svg'
 const TransactionsTable = ({ activeNodes }) => {
   const { theme } = useContext(ThemeContext);
   return (
-    <div className="table-responsive pt-5">
+    <div className="table-responsive pt-4">
       <table
         className="table table-border"
         style={{

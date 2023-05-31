@@ -11,7 +11,7 @@ const PendingTransactionWrapper = ({ pendingTxns }) => {
         className="table table-border"
         style={{
           borderBottom:
-            theme === "light" ? "gray" : "1px solid rgba(22,22,63,1)",
+            theme === "light" ? "" : "1px solid rgba(22,22,63,1)",
         }}
       >
         <thead>

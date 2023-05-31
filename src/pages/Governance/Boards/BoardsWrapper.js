@@ -201,7 +201,7 @@ const BoardsWrapper = ({ BoardsData }) => {
               <td style={{ paddingTop: "25px" }}>
                 <div
                   style={{
-                    color: "rgba(128,128,153,1)",
+                    color: theme==="light"? "black":"rgba(225,225,225,1)",
                     fontSize: "16px",
                     fontFamily: "Poppins",
                   }}
@@ -212,7 +212,7 @@ const BoardsWrapper = ({ BoardsData }) => {
               <td style={{ paddingTop: "25px" }}>
                 <div
                   style={{
-                    color: "rgba(128,128,153,1)",
+                    color: theme==="light"? "black":"rgba(225,225,225,1)",
                     fontSize: "16px",
                     fontFamily: "Poppins",
                   }}
@@ -223,7 +223,7 @@ const BoardsWrapper = ({ BoardsData }) => {
               <td style={{ paddingTop: "25px" }}>
                 <div
                   style={{
-                    color: "rgba(128,128,153,1)",
+                    color:theme==="light"? "black":"rgba(225,225,225,1)",
                     fontSize: "16px",
                     fontFamily: "Poppins",
                   }}
@@ -237,6 +237,7 @@ const BoardsWrapper = ({ BoardsData }) => {
                     color: "rgba(128,128,153,1)",
                     fontSize: "16px",
                     fontFamily: "Poppins",
+                    color:'#23A15F'
                   }}
                 >
                   <img src={wifi} alt="icon" /> {node.active}
