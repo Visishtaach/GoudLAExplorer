@@ -10,17 +10,17 @@ const ViewBlockWrapper = ({ blocks }) => {
         className="table table-border"
         style={{
           borderBottom:
-            theme === "light" ? "gray" : "1px solid rgba(22,22,63,1)",
+            theme === "light" ? "" : "1px solid rgba(22,22,63,1)",
         }}
       >
         <thead>
           <tr
             style={{
               color: theme === "light" ? "black" : "rgba(225,225,225,1)",
-              //   border:theme ==="light"? "gray" : "",
+             
               textAlign: "left",
               alignItems: "center",
-              //   justifyContent: "center",
+             
             }}
           >
             <th

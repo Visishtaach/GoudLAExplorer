@@ -20,7 +20,7 @@ const Proposal = () => {
     backgroundColor: "rgba(127,127,152,1)",
     width: "auto",
     height: "auto",
-    color: "rgba(0,0,51,1)",
+    color: theme === "light" ? "white" : "rgba(0,0,51,1)",
     borderRadius: "10px",
     padding: "10px 40px 10px",
     fontFamily: "Poppins",

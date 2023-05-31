@@ -6,7 +6,6 @@ import Table from "react-bootstrap/Table";
 import { BsDot } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 
-
 const Passed = () => {
   const navigate = useNavigate();
   const { theme } = useContext(ThemeContext);
@@ -29,7 +28,7 @@ const Passed = () => {
                       theme === "light"
                         ? "rgb(235, 235, 235)"
                         : "rgba(37,64,110,1)",
-                        cursor:'pointer'
+                    cursor: "pointer",
                   }}
                 >
                   <td
@@ -77,7 +76,7 @@ const Passed = () => {
                         style={{
                           display: "inline-flex",
                           padding: "5px",
-                          color: "rgb(0, 0, 51)",
+                          color: theme === "light" ? "white" : "rgb(0, 0, 51)",
                           fontSize: "13px",
                           fontFamily: "Poppins",
                           backgroundColor:
@@ -102,7 +101,7 @@ const Passed = () => {
                             width: "400px",
                             color: "pink",
                             borderRadius: "10px",
-                            border: "1px solid #4AA4DC",
+                            border: theme === "light" ? "1px solid #B6B6B6"  : "1px solid #4AA4DC",
                             backgroundColor:
                               theme === "light" ? "white" : "#16163F",
                           }}
@@ -112,7 +111,13 @@ const Passed = () => {
                             key={1}
                             now={item.progress1}
                             label={`${item.progress1}%`}
-                            style={{ fontSize: "16px", fontFamily: "Avenir" }}
+                            style={{
+                              fontSize: "16px",
+                              fontFamily: "Avenir",
+                              zIndex: 1,
+                              borderTopRightRadius: "10px",
+                              borderBottomRightRadius: "10px",
+                            }}
                           />
                           <ProgressBar
                             variant="danger"
@@ -120,10 +125,12 @@ const Passed = () => {
                             now={item.progress2}
                             label={`${item.progress2}.`}
                             style={{
-                              borderTopRightRadius: "3px",
-                              borderBottomRightRadius: "3px",
+                              // borderTopRightRadius: "3px",
+                              // borderBottomRightRadius: "3px",
                               fontSize: "16px",
                               fontFamily: "Avenir",
+                              marginLeft:'-8px',
+                              paddingLeft:'6px'
                             }}
                           />
                           <ProgressBar
@@ -132,10 +139,11 @@ const Passed = () => {
                             now={item.progress3}
                             label={`${item.progress3}.`}
                             style={{
-                              borderTopRightRadius: "3px",
-                              borderBottomRightRadius: "3px",
+                              borderTopRightRadius: "10px",
+                              borderBottomRightRadius: "10px",
                               fontSize: "16px",
                               fontFamily: "Avenir",
+                              zIndex:1
                             }}
                           />
                           <ProgressBar
@@ -144,10 +152,11 @@ const Passed = () => {
                             now={item.progress4}
                             label={`${item.progress4}`}
                             style={{
-                              borderTopRightRadius: "5px",
-                              borderBottomRightRadius: "5px",
+                              borderTopRightRadius: "10px",
+                              borderBottomRightRadius: "10px",
                               fontFamily: "Avenir",
                               fontSize: "16px",
+                              marginLeft:'-8px'
                             }}
                           />
                         </ProgressBar>
@@ -159,7 +168,7 @@ const Passed = () => {
                       <div
                         style={{
                           color: "#23A15F",
-                          fontSize: "18px",
+                          fontSize: "16px",
                           fontFamily: "Poppins",
                           textAlign: "left",
                         }}
@@ -170,7 +179,7 @@ const Passed = () => {
                       <div
                         style={{
                           color: "rgba(127,127,152,1)",
-                          fontSize: "18px",
+                          fontSize: "14px",
                           fontFamily: "Poppins",
                           textAlign: "left",
                         }}
