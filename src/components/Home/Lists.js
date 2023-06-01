@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { ThemeContext } from "../../themecontext/ThemeContext";
-import { Row, Col, Button,ProgressBar } from "react-bootstrap";
+import { Row, Col, Button, ProgressBar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import Table from "react-bootstrap/Table";
 const Lists = () => {
@@ -73,23 +73,23 @@ const Lists = () => {
   ];
 
   const style1 = {
-    fontSize: "17px",
+    fontSize: window.innerWidth <= 290 ? "14px": "17px",
     textDecoration: "none",
     backgroundColor: "rgba(127,127,152,1)",
     width: "auto",
     height: "auto",
     color: "rgba(255,255,255,1)",
     borderRadius: "10px",
-    padding: "10px 40px 10px",
+    padding: window.innerWidth <=290 ? "5px 10px 5px": "10px 30px 10px",
   };
   const style2 = {
-    fontSize: "17px",
+    fontSize:window.innerWidth <= 290 ? "14px": "17px",
     textDecoration: "none",
     width: "auto",
     height: "auto",
     color: theme === "light" ? "black" : "white",
 
-    padding: "10px 40px 10px",
+    padding: window.innerWidth <=290 ? "5px 10px 5px":  "10px 30px 10px",
   };
 
   return (
@@ -97,51 +97,63 @@ const Lists = () => {
       <div
         className="container mt-4"
         style={{
-          padding: "20px",
+          padding: "20px ",
           backgroundColor: theme === "light" ? "white" : "rgb(0, 0, 51)",
           borderRadius: "15px",
           color: theme === "light" ? "black" : "white",
-         
-       //   boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
-       border: theme==="light" ? "1px solid rgba(235,235,235,1)" : "1px solid #000033"
+
+          border:
+            theme === "light"
+              ? "1px solid rgba(235,235,235,1)"
+              : "1px solid #000033",
         }}
       >
-      <div className="m-4"
-        style={{
-        textAlign: "left",
-        display: "inline-flex",
-        borderRadius: "10px",
-        border:
-          theme === "light"
-            ? "1px solid  rgba(235,235,235,1)"
-            : "1px solid rgba(22,22,63,1)",
-        
-      }}
-    >
-      <NavLink
-        to="/"
-        variant="secondary"
-        onClick={handleButtonClick1}
-        style={tab1 ? style1 : style2}
-      >
-        Active Proposals
-      </NavLink>
+        <div style={{display:'flex', justifyContent:'start', paddingBottom:'20px'}}>
+        <div
+          // className="container-sm m-4"
+          style={{
+            textAlign: "left",
+            display: "inline-flex",
+            borderRadius: "10px",
+            border:
+              theme === "light"
+                ? "1px solid  rgba(235,235,235,1)"
+                : "1px solid rgba(22,22,63,1)",
+          }}
+        >
+       
+          <NavLink
+            to="/"
+            variant="secondary"
+            onClick={handleButtonClick1}
+            style={tab1 ? style1 : style2}
+          >
+            Active Proposals
+          </NavLink>
 
-      <NavLink
-        variant="light"
-        onClick={handleButtonClick2}
-        style={tab2 ? style1 : style2}
-      >
-        InActive Proposals
-      </NavLink>
-    </div>
+          <NavLink
+            variant="light"
+            onClick={handleButtonClick2}
+            style={tab2 ? style1 : style2}
+          >
+            InActive Proposals
+          </NavLink>
+          </div>
+        </div>
         <Row lg={12} m={5}>
           <Col>
             <Table responsive>
               <tbody>
                 {list1Items.map((item) => (
-                  <tr style={{borderColor: theme === "light"?'rgb(235, 235, 235)':'rgba(37,64,110,1)'}}>
-                    <td style={{paddingBottom:'10px'}}>
+                  <tr
+                    style={{
+                      borderColor:
+                        theme === "light"
+                          ? "rgb(235, 235, 235)"
+                          : "rgba(37,64,110,1)",
+                    }}
+                  >
+                    <td style={{ paddingBottom: "10px" }}>
                       <div
                         className="p-4 text-center"
                         style={{
@@ -156,7 +168,8 @@ const Lists = () => {
                       </div>
                     </td>
                     <td>
-                      <div className="d-flex flex-column"
+                      <div
+                        className="d-flex flex-column"
                         style={{
                           color:
                             theme === "light"
@@ -169,39 +182,38 @@ const Lists = () => {
                       >
                         {item.name}
                         <span
-                        style={{
-                          color: "rgba(48,197,244,1)",
-                          fontSize: "13px",
-                          fontFamily: "Poppins",
-                        }}
-                      >
-                        {item.description}
-                      </span>
+                          style={{
+                            color: "rgba(48,197,244,1)",
+                            fontSize: "13px",
+                            fontFamily: "Poppins",
+                          }}
+                        >
+                          {item.description}
+                        </span>
                       </div>
-                     
                     </td>
                     {/* <td>{item.description}</td> */}
                     <td align="left">
                       {" "}
-                     <Row lg={12}>
-                     <div>
-                        <ProgressBar
-                          now={item.progress}
-                          label={`${item.progress}%`}
-                          variant={item.variant}
-                          style={{
-                            height: "46px",
-                            width:'400px',
-                            color: "pink",
-                            borderRadius: "10px",
-                            border: "1px solid #4AA4DC",
-                            backgroundColor:
-                              theme === "light" ? "white" : "#16163F",
-                          }}
-                          className="custom-progress-bar"
-                        />
-                      </div>
-                     </Row>
+                      <Row lg={12}>
+                        <div>
+                          <ProgressBar
+                            now={item.progress}
+                            label={`${item.progress}%`}
+                            variant={item.variant}
+                            style={{
+                              height: "46px",
+                              width: "400px",
+                              color: "pink",
+                              borderRadius: "10px",
+                              border: "1px solid #4AA4DC",
+                              backgroundColor:
+                                theme === "light" ? "white" : "#16163F",
+                            }}
+                            className="custom-progress-bar"
+                          />
+                        </div>
+                      </Row>
                     </td>
                     <td align="right">
                       <Button
@@ -212,7 +224,6 @@ const Lists = () => {
                           width: "84px",
                           height: "46px",
                           fontSize: "21px",
-                          
                         }}
                       >
                         Vote
