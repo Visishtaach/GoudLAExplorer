@@ -6,6 +6,7 @@ import Footer from "../../../components/layout/Footer";
 import { NavLink } from "react-router-dom";
 import Passed from "./Passed";
 import Voting from "./Voting";
+import Card from "../../Blocks/parameter/Card";
 
 const RejectedDetails = () => {
   const { theme } = useContext(ThemeContext);
@@ -129,8 +130,12 @@ const RejectedDetails = () => {
           <div style={{ paddingTop: "20px", height: "1300px" }}>
             <p style={{ fontSize: "24px", fontFamily: "Poppins" }}>Timeline</p>
 
-            <div className="d-flex" style={{ gap: "20px", paddingTop:'20px' }}>
-              <div
+            <div className="d-flex flex-wrap" style={{ gap: "20px", paddingTop:'20px' }}>
+              <Card title="Submitted at:"  value="2023-04-11 05:26"/>
+            
+              <Card title="Deposited at:" value="2023-04-11 05:26"/>
+           
+              <div className="responsive-card"
                 style={{
                   width: "294px",
                   height: "146px",
@@ -143,47 +148,15 @@ const RejectedDetails = () => {
                   flexDirection:'column'
                 }}
               >
-                <div style={{fontSize:'24px', fontFamily:'Poppins',}}>Submitted at:</div>
-                <div style={{fontSize:'24px', fontFamily:'Avenir', padding:'20px'}}>2023-04-11 05:26</div>
-              </div>
-              <div
-                style={{
-                  width: "294px",
-                  height: "146px",
-                  border: "1px solid rgba(128,99,172,1)",
-                  borderRadius: "15px",
-                  padding:'20px',
-                  display:'flex',
-                  justifyContent: "start",
-                  alignItems: "start",
-                  flexDirection:'column'
-                }}
-              >
-                <div style={{fontSize:'24px', fontFamily:'Poppins',}}>Deposited at:</div>
-                <div style={{fontSize:'24px', fontFamily:'Avenir', padding:'20px'}}>2023-04-11 05:26</div>
-              </div>
-              <div
-                style={{
-                  width: "294px",
-                  height: "146px",
-                  border: "1px solid rgba(128,99,172,1)",
-                  borderRadius: "15px",
-                  padding:'20px',
-                  display:'flex',
-                  justifyContent: "start",
-                  alignItems: "start",
-                  flexDirection:'column'
-                }}
-              >
-                <div style={{fontSize:'24px', fontFamily:'Poppins',}}>Voting start from</div>
-                <div style={{fontSize:'24px', fontFamily:'Avenir', paddingTop:'20px',paddingLeft:'20px'}}>2023-04-11 05:26</div>
+                <div style={{fontSize:'21px', fontFamily:'Poppins',}}>Voting start from</div>
+                <div style={{fontSize:'21px', fontFamily:'Avenir', paddingTop:'20px',paddingLeft:'20px'}}>2023-04-11 05:26</div>
                 <span style={{fontSize:'8px',paddingLeft:'20px'}}>
                   * Time remaining 0 Days, 00 Hours, 0Minutes, 0Seconds
                 </span>
               </div>
             </div>
-            <div className="d-flex" style={{ gap: "20px", paddingTop: "20px" }}>
-              <div
+            <div className="d-flex flex-wrap" style={{ gap: "20px", paddingTop: "20px" }}>
+              <div className="responsive-card"
                 style={{
                   width: "294px",
                   height: "146px",
@@ -196,29 +169,15 @@ const RejectedDetails = () => {
                   flexDirection:'column'
                 }}
               >
-                 <div style={{fontSize:'24px', fontFamily:'Poppins',}}>Voting end from</div>
-                <div style={{fontSize:'24px', fontFamily:'Avenir', paddingTop:'20px',paddingLeft:'20px'}}>2023-04-11 05:26</div>
+                 <div style={{fontSize:'21px', fontFamily:'Poppins',}}>Voting end from</div>
+                <div style={{fontSize:'21x', fontFamily:'Avenir', paddingTop:'20px',paddingLeft:'20px'}}>2023-04-11 05:26</div>
                 <span style={{fontSize:'8px',paddingLeft:'20px'}}>
                   * Time remaining 0 Days, 00 Hours, 0Minutes, 0Seconds
                 </span>
               </div>
-              <div
-                style={{
-                  width: "294px",
-                  height: "146px",
-                  border: "1px solid rgba(128,99,172,1)",
-                  borderRadius: "15px",
-                  padding:'20px',
-                  display:'flex',
-                  justifyContent: "start",
-                  alignItems: "start",
-                  flexDirection:'column'
-                }}
-              >
-                 <div style={{fontSize:'24px', fontFamily:'Poppins',}}>Votes</div>
-                <div style={{fontSize:'24px', fontFamily:'Avenir', paddingTop:'20px',paddingLeft:'20px'}}> - </div>
-               
-              </div>
+
+              <Card title="Votes" value="-"/>
+             
             </div>
           </div>
         )}
