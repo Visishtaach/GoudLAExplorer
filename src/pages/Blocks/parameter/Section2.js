@@ -1,8 +1,42 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { ThemeContext } from "../../../themecontext/ThemeContext";
 
 const Section2 = () => {
   const { theme } = useContext(ThemeContext);
+  const [name, setName] = useState()
+  const [version, setVersion] = useState()
+  const [go_version, setGo_version] = useState()
+  const[commit, setCommit] = useState()
+  const [tags, setTags] = useState()
+
+  const [buildDeps, setBuildDeps] = useState([]);
+
+const getAppInfo = async()=>{
+    const res = await fetch('http://3.95.171.204:1317//cosmos/base/tendermint/v1beta1/node_info')
+    const appInfo = await res.json()
+    console.log('app info', appInfo.application_version )
+    
+    setName(appInfo.application_version.app_name)
+    setCommit(appInfo.application_version.git_commit)
+    setGo_version(appInfo.application_version.go_version)
+    setTags(appInfo.application_version.build_tags)
+    setVersion(appInfo.application_version.version)
+
+   setBuildDeps(appInfo.application_version.build_deps
+    )
+  
+  }
+  console.log(buildDeps)
+
+  useEffect(()=>{
+getAppInfo()
+  },[])
+
+
+  const maxItems = 25;
+
+  // Get the subset of items to render
+  const itemsToRender = buildDeps.slice(0, maxItems);
   const textStyle = {
     fontFamily: "Poppins",
     fontSize: "24px",
@@ -69,7 +103,7 @@ const Section2 = () => {
                   App name
                 </div>
                 <div className="col-md-9" style={textStyle}>
-                  GoudLA
+                  {name}
                 </div>
               </li>
               <li
@@ -89,7 +123,7 @@ const Section2 = () => {
                   version
                 </div>
                 <div className="col-md-9" style={textStyle}>
-                  15.0.0
+                  {version}
                 </div>
               </li>
               <li
@@ -109,7 +143,7 @@ const Section2 = () => {
                   git-COMMIT
                 </div>
                 <div className="col-md-9" style={textStyle}>
-                  ff18d8244fcda7313ec951fb1b3bee
+                  {commit}1525566
                 </div>
               </li>{" "}
               <li
@@ -129,7 +163,7 @@ const Section2 = () => {
                   build_tags
                 </div>
                 <div className="col-md-9" style={textStyle}>
-                  netgo, ledger
+                  {tags}
                 </div>
               </li>{" "}
               <li
@@ -149,10 +183,10 @@ const Section2 = () => {
                   go_version
                 </div>
                 <div className="col-md-9" style={textStyle}>
-                  go version go 1.19.1 Linux/amd64
+                  {go_version}
                 </div>
               </li>
-              <li
+              {/* <li
                 style={{
                   borderBottom:
                     theme === "light"
@@ -171,7 +205,7 @@ const Section2 = () => {
                 <div className="col-md-9" style={textStyle}>
                   netgo, ledger
                 </div>
-              </li>{" "}
+              </li>{" "} */}
             </ul>
             <div
               className={
@@ -184,7 +218,6 @@ const Section2 = () => {
                     className="col-md-3"
                     style={{ fontSize: "24px", fontFamily: "Poppins" }}
                   >
-                    {/* go_version */}
                   </div>
                   <div
                     className="col-md-9 d-flex flex-direction-row"
@@ -218,12 +251,12 @@ const Section2 = () => {
                     </div>
                   </div>
                 </li>
-                <li style={{ display: "flex" }}>
+               {itemsToRender.map((dep, index) => ( <li style={{ display: "flex" }}>
                   <div
                     className="col-md-3"
                     style={{ fontSize: "24px", fontFamily: "Poppins" }}
                   >
-                    {/* go_version */}
+                    
                   </div>
                   <div
                     className="col-md-9 d-flex flex-direction-row"
@@ -241,98 +274,23 @@ const Section2 = () => {
                       className="col-md-4 "
                       style={{ fontSize: "12px", fontFamily: "Poppins" }}
                     >
-                      Filippoioedwards25519
+                      {dep.path}
                     </div>
                     <div
                       className="col-md-3"
                       style={{ fontSize: "12px", fontFamily: "Poppins" }}
                     >
-                      v1.0.0-rc.1
+                      {dep.version}
                     </div>
                     <div
                       className="col-md-3"
                       style={{ fontSize: "12px", fontFamily: "Poppins" }}
                     >
-                      h1:m0vOOB23frxzvAOk44usCgLWvtsxloMCTBGjZlpmGfU=
+                      {dep.sum}
                     </div>
                   </div>
-                </li>
-                <li style={{ display: "flex" }}>
-                  <div
-                    className="col-md-3"
-                    style={{ fontSize: "24px", fontFamily: "Poppins" }}
-                  >
-                    {/* go_version */}
-                  </div>
-                  <div
-                    className="col-md-9 d-flex flex-direction-row"
-                    style={{
-                      borderBottom:
-                        theme === "light"
-                          ? "1px solid rgba(235,235,235,1)"
-                          : "1px solid rgba(22,22,63,1)",
-                      fontSize: "24px",
-                      fontFamily: "Poppins",
-                      padding: "10px",
-                    }}
-                  >
-                    <div
-                      className="col-md-4 "
-                      style={{ fontSize: "12px", fontFamily: "Poppins" }}
-                    >
-                      aithub.com/99designs/keyring
-                    </div>
-                    <div
-                      className="col-md-3"
-                      style={{ fontSize: "12px", fontFamily: "Poppins" }}
-                    >
-                      v1.2.1
-                    </div>
-                    <div
-                      className="col-md-3"
-                      style={{ fontSize: "12px", fontFamily: "Poppins" }}
-                    >
-                      h1:m0vOOB23frxzvAOk44usCgLWvtsxloMCTBGjZlpmGfU=
-                    </div>
-                  </div>
-                </li>
-                <li style={{ display: "flex" }}>
-                  <div
-                    className="col-md-3"
-                    style={{ fontSize: "24px", fontFamily: "Poppins" }}
-                  ></div>
-                  <div
-                    className="col-md-9 d-flex flex-direction-row"
-                    style={{
-                      borderBottom:
-                        theme === "light"
-                          ? "1px solid rgba(235,235,235,1)"
-                          : "1px solid rgba(22,22,63,1)",
-                      fontSize: "24px",
-                      fontFamily: "Poppins",
-                      padding: "10px",
-                    }}
-                  >
-                    <div
-                      className="col-md-4 "
-                      style={{ fontSize: "12px", fontFamily: "Poppins" }}
-                    >
-                      aithub.com/99designs/keyring
-                    </div>
-                    <div
-                      className="col-md-3"
-                      style={{ fontSize: "12px", fontFamily: "Poppins" }}
-                    >
-                      v1.2.1
-                    </div>
-                    <div
-                      className="col-md-3"
-                      style={{ fontSize: "12px", fontFamily: "Poppins" }}
-                    >
-                      h1:m0vOOB23frxzvAOk44usCgLWvtsxloMCTBGjZlpmGfU=
-                    </div>
-                  </div>
-                </li>
+                </li>))}
+               
               </ul>
             </div>
           </div>

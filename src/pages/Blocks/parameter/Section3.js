@@ -1,12 +1,45 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "../../../themecontext/ThemeContext";
 
 const Section3 = () => {
+  
   const { theme } = useContext(ThemeContext);
+ 
+  const [defaultNode, setDefaultNode] = useState()
+  const [listen_addr, setListen_addr] = useState()
+  const [nw, setNw] = useState()
+  const [channels, setChannels] = useState()
+  const [tx, setTx] = useState()
+  const [rpc, setRpc] = useState()
+  const [p2p, setP2p] = useState()
+  const [block, setBlock] = useState()
+  const [appD, setAppD] = useState()
+
+
+  const getNodeInfo = async() =>{
+    const res = await fetch('http://3.95.171.204:1317//cosmos/base/tendermint/v1beta1/node_info')
+    const nodeData = await res.json()
+    //  console.log('Node info::', nodeData.default_node_info)
+     setDefaultNode(nodeData.default_node_info.default_node_id)
+     setListen_addr(nodeData.default_node_info.listen_addr)
+     setNw(nodeData.default_node_info.network)
+     setChannels(nodeData.default_node_info.channels)
+     setTx(nodeData.default_node_info.other.tx_index)
+     setP2p(nodeData.default_node_info.protocol_version.p2p)
+     setBlock(nodeData.default_node_info.protocol_version.block)
+     setRpc(nodeData.default_node_info.other.rpc_address)
+     setAppD(nodeData.default_node_info.protocol_version.app)
+    }
+
+    useEffect(()=>{
+getNodeInfo()
+    },[])
   const textStyle = {
     fontFamily: "Poppins",
     fontSize: "24px",
   };
+
+
   return (
     <div
       style={{
@@ -52,7 +85,7 @@ const Section3 = () => {
                   }}
                 >
                   <div className="col-md-4">P2p</div>
-                  <div>8</div>
+                  <div>{p2p}</div>
                 </div>
               </div>
             </li>
@@ -77,7 +110,7 @@ const Section3 = () => {
                   }}
                 >
                   <div className="col-md-4">Block</div>
-                  <div>11</div>
+                  <div>{block}</div>
                 </div>
               </div>
             </li>{" "}
@@ -102,7 +135,7 @@ const Section3 = () => {
                   }}
                 >
                   <div className="col-md-4">App</div>
-                  <div>15</div>
+                  <div>{appD}</div>
                 </div>
               </div>
             </li>
@@ -123,7 +156,7 @@ const Section3 = () => {
                 default_node_id
               </div>
               <div className="col-md-9" style={textStyle}>
-                49802f6924730718069ad5aa18ffq55q1827699e
+                {defaultNode}
               </div>
             </li>{" "}
             <li
@@ -143,7 +176,7 @@ const Section3 = () => {
                 listen_addr
               </div>
               <div className="col-md-9" style={textStyle}>
-                144.126.222.208.31311
+                {listen_addr}
               </div>
             </li>{" "}
             <li
@@ -163,7 +196,7 @@ const Section3 = () => {
                 network
               </div>
               <div className="col-md-9" style={textStyle}>
-                osmosis-1
+                {nw}
               </div>
             </li>
             <li
@@ -183,7 +216,7 @@ const Section3 = () => {
                 channels
               </div>
               <div className="col-md-9" style={textStyle}>
-                QCahillMwOGBhAA==
+                {channels}
               </div>
             </li>{" "}
             <li
@@ -204,7 +237,7 @@ const Section3 = () => {
               </div>
               <div className="col-md-9 d-flex" style={textStyle}>
                 <div className="col-md-4"> Tx Index</div>
-                <div>on</div>
+                <div>{tx}</div>
               </div>
             </li>{" "}
             <li
@@ -225,7 +258,7 @@ const Section3 = () => {
               </div>
               <div className="col-md-9 d-flex" style={textStyle}>
                 <div className="col-md-4"> Rpc Address</div>
-                <div>tcp://0.0.0:26657</div>
+                <div>{rpc}</div>
               </div>
             </li>{" "}
         

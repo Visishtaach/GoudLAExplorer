@@ -1,6 +1,24 @@
-import React from 'react'
+import React,{useState, useEffect} from 'react'
 
 const DistributionParameters = () => {
+  const [community_tax, setCommunityTax] = useState()
+  const[base, setBase]= useState()
+  const [bonus, setBonus] = useState()
+  const [withdraw, setWithdarw] = useState(false)
+  const getDisturbutionParams = async()=>{
+      const res = await fetch(`http://3.95.171.204:1317//cosmos/distribution/v1beta1/params`)
+      const dpData  = await res.json()
+      console.log('dp params', dpData, dpData.params.withdraw_addr_enabled)
+      setCommunityTax(dpData.params.community_tax)
+      setBase(dpData.params.base_proposer_reward)
+      setBonus(dpData.params.bonus_proposer_reward)
+      setWithdarw(dpData.params.withdraw_addr_enabled)
+  }
+
+  useEffect(()=>{
+    getDisturbutionParams()
+  },[])
+
   return (
     <div style={{ paddingTop: "40px"  }}>
     <p style={{ fontSize: "24px", fontFamily: "Poppins" }}>
@@ -33,7 +51,7 @@ const DistributionParameters = () => {
             padding: "20px",
           }}
         >
-          0
+          {community_tax}
         </div>
       </div>
       <div  className='responsive-card'
@@ -61,7 +79,7 @@ const DistributionParameters = () => {
             padding: "20px",
           }}
         >
-          0
+          {base}
         </div>
       </div>
       <div  className='responsive-card'
@@ -90,7 +108,7 @@ const DistributionParameters = () => {
             paddingLeft: "20px",
           }}
         >
-          0
+          {bonus}
         </div>
       </div>
       <div  className='responsive-card'
@@ -113,12 +131,12 @@ const DistributionParameters = () => {
         <div
           style={{
             fontSize:window.innerWidth <= 290 ? "16px": "21px",
-            fontFamily: "Avenir",
+            fontFamily: "Poppins",
             paddingTop: "20px",
             paddingLeft: "20px",
           }}
         >
-            true
+          true {withdraw}
         </div>
       </div>
     </div>

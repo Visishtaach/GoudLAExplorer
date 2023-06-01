@@ -1,10 +1,11 @@
-import React, { useContext } from "react";
+import React, { useContext,useEffect } from "react";
 import path from "../../../assets/Blocks/Nodes Dark.svg";
 import { ThemeContext } from "../../../themecontext/ThemeContext";
 import lightNode from "../../../assets/Blocks/Nodes Light.svg";
 
 const List = ({ activeNodes }) => {
   const { theme } = useContext(ThemeContext);
+  
   return (
     <div className="table-responsive pt-5">
       <table

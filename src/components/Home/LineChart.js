@@ -42,8 +42,8 @@ const titleTooltip = (item) => {
   return "";
 };
 const labelTooltip = (item) => {
-  console.log(item);
-  console.log(item.raw);
+  // console.log(item);
+  // console.log(item.raw);
   return `$${item.raw}`;
 };
 
@@ -52,7 +52,7 @@ const LineChart = () => {
 
   const getDashValue = (ctx) => {
     const firstTick = 0;
-    console.log("ctx", ctx.chart.ctx);
+    // console.log("ctx", ctx.chart.ctx);
 
     if (theme === "light") {
       if (ctx.index === firstTick) {

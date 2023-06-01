@@ -1,6 +1,29 @@
-import React from "react";
+import React,{useState, useEffect } from "react";
 
 const StakingParameters = () => {
+
+  const [unbonding_time, setUnbonding_time] = useState();
+  const [max_validators, setMax_validators] = useState();
+  const [max_entries, setMax_entries] = useState();
+  const [historical_entries, setHistorical_entries] = useState();
+  const [bond_denom, setBond_demon] = useState()
+
+  const getStakingParameters = async() => {
+      const res = await fetch('http://3.95.171.204:1317///cosmos/staking/v1beta1/params')
+      const spData = await res.json()
+      console.log('staking params', spData)
+      console.log('unbounding_time', spData.params.unbonding_time)
+      setBond_demon(spData.params.bond_denom)
+      setHistorical_entries(spData.params.historical_entries)
+      setMax_entries(spData.params.max_entries)
+      setMax_validators(spData.params.max_validators)
+      setUnbonding_time(spData.params.unbonding_time)
+
+  }
+
+  useEffect(()=>{
+    getStakingParameters()
+  })
   return (
     <div style={{ paddingTop: "40px" }}>
       <p style={{ fontSize: "24px", fontFamily: "Poppins" }}>
@@ -38,7 +61,7 @@ const StakingParameters = () => {
               padding: "20px",
             }}
           >
-            1209600s
+            {unbonding_time}
           </div>
         </div>
         <div
@@ -65,7 +88,7 @@ const StakingParameters = () => {
               padding: "20px",
             }}
           >
-            150
+            { max_validators}
           </div>
         </div>
         <div
@@ -93,7 +116,7 @@ const StakingParameters = () => {
               paddingLeft: "20px",
             }}
           >
-            7
+            {max_entries}
           </div>
         </div>
         <div
@@ -122,7 +145,7 @@ const StakingParameters = () => {
             }}
           >
             {" "}
-            10000{" "}
+            {historical_entries}{" "}
           </div>
         </div>
       </div>
@@ -160,7 +183,7 @@ const StakingParameters = () => {
               paddingLeft: "20px",
             }}
           >
-            uosmo
+            {bond_denom}
           </div>
         </div>
       </div>

@@ -1,6 +1,26 @@
-import React from 'react'
+import React,{useState, useEffect} from 'react'
 
 const SlashingParameters = () => {
+const [signed_blocks, setSigned_blocks] = useState()
+const [mspw, setMspw] = useState()
+const [dt, setDt] = useState()
+const [sfdt,setSfdt] = useState()
+const [sfds, setSfds] = useState()
+
+  const getSlashingParams = async() =>{
+    const res = await fetch('http://3.95.171.204:1317//cosmos/slashing/v1beta1/params')
+      const spData = await res.json()
+      // console.log('slashing data', spData)
+      setSigned_blocks(spData.params.signed_blocks_window)
+      setDt(spData.params.downtime_jail_duration)
+      setMspw(spData.params.min_signed_per_window)
+      setSfds(spData.params.slash_fraction_double_sign)
+      setSfdt(spData.params.slash_fraction_downtime)
+  }
+
+  useEffect(()=>{
+    getSlashingParams()
+  },[])
   return (
     <div style={{ paddingTop: "40px"  }}>
     <div style={{ fontSize: "24px", fontFamily: "Poppins" }}>
@@ -33,7 +53,7 @@ const SlashingParameters = () => {
             padding: "20px",
           }}
         >
-          30000
+          {signed_blocks}
         </div>
       </div>
       <div  className='responsive-card'
@@ -62,7 +82,7 @@ const SlashingParameters = () => {
             padding: "20px",
           }}
         >
-          5%
+          {mspw}
         </div>
       </div>
       <div  className='responsive-card'
@@ -91,7 +111,7 @@ const SlashingParameters = () => {
             paddingLeft: "20px",
           }}
         >
-          60s
+          {dt}
         </div>
       </div>
      
@@ -123,7 +143,7 @@ const SlashingParameters = () => {
             paddingLeft: "20px",
           }}
         >
-         5%
+         {sfds}
         </div>
       </div>
       <div  className='responsive-card'
@@ -151,7 +171,7 @@ const SlashingParameters = () => {
             padding: "20px",
           }}
         >
-          0
+          {sfdt}
         </div>
       
     </div>

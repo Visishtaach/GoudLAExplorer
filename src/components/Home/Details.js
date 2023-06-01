@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import fire from "../../assets/Group_223.png";
 import profit from "../../assets/Group_221.png";
 import cap from "../../assets/Icons/cap.svg";
@@ -9,6 +9,29 @@ import Col from "react-bootstrap/Col";
 
 const Details = () => {
   const { theme } = useContext(ThemeContext);
+  const [height, setHeight] = useState()
+  const [communityPool, setCommunityPool] = useState()
+
+  const getHeight = async() =>{
+    const res = await fetch(`http://3.95.171.204:1317//cosmos/base/tendermint/v1beta1/blocks/latest`)
+    const data = await res.json()
+    console.log('data', data.block.header.height)
+    if(data){
+      setHeight( data.block.header.height)
+    }
+  }
+
+const  getCommunityPoolData = async()=>{
+    const cp = await fetch(`http://3.95.171.204:1317//cosmos/distribution/v1beta1/community_pool`)
+    const cpData = await cp.json()
+    console.log('communitypool data', cpData)
+  }
+
+  useEffect(()=>{
+    getHeight()
+    getCommunityPoolData()
+  
+  },[])
   return (
     <>
       <div
@@ -481,7 +504,7 @@ const Details = () => {
                           : "rgba(255,255,255,1)",
                     }}
                   >
-                    24517698
+                    {height}
                   </div>{" "}
                   <div
                     style={{

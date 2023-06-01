@@ -1,9 +1,18 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { ThemeContext } from "../../../themecontext/ThemeContext";
 import { ProgressBar } from "react-bootstrap";
 
 const ViewBlockWrapper = ({ blocks }) => {
   const { theme } = useContext(ThemeContext);
+
+  const getBlockData = async() =>{
+    const res = await fetch(`http://3.95.171.204:1317//cosmos/base/tendermint/v1beta1/blocks/latest`)
+    const blockData = await res.json()
+    console.log(blockData)
+  }
+  useEffect(()=>{
+    getBlockData()
+  },[])
   return (
     <div className="table-responsive pt-5">
       <table
