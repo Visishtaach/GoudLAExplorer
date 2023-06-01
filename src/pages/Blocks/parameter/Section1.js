@@ -41,12 +41,12 @@ const Section1 = () => {
               flexDirection: "column",
             }}
           >
-            <div style={{ fontSize: "21px", fontFamily: "Poppins" }} className="responsive-card">
+            <div style={{ fontSize: window.innerWidth <= 290 ? "16px":"21px", fontFamily: "Poppins" }} className="responsive-card">
               height
             </div>
             <div
               style={{
-                fontSize: "21px",
+                fontSize: window.innerWidth <= 290 ? "16px":"21px",
                 fontFamily: "Avenir",
                 padding: "20px",
               }}
@@ -68,12 +68,12 @@ const Section1 = () => {
               
             }}
           >
-            <div style={{ fontSize: "21px", fontFamily: "Poppins", }}>
+            <div style={{ fontSize: window.innerWidth <= 290 ? "16px":"21px", fontFamily: "Poppins", }}>
               bonded_and_supply
             </div>
             <div
               style={{
-                fontSize: "21px",
+                fontSize: window.innerWidth <= 290 ? "16px": "21px",
                 fontFamily: "Avenir",
                 padding: "20px",
               }}
@@ -95,12 +95,12 @@ const Section1 = () => {
               overflow: "hidden"
             }}
           >
-            <div style={{ fontSize: "21px", fontFamily: "Poppins" }}>
+            <div style={{ fontSize: window.innerWidth <= 290 ? "16px":"21px", fontFamily: "Poppins" }}>
               bonded_ratio
             </div>
             <div
               style={{
-                fontSize: "21px",
+                fontSize:window.innerWidth <= 290 ? "16px": "21px",
                 fontFamily: "Avenir",
                 paddingTop: "20px",
                 paddingLeft: "20px",
@@ -124,12 +124,12 @@ const Section1 = () => {
               flexDirection: "column",
             }}
           >
-            <div style={{ fontSize: "21px", fontFamily: "Poppins" }}>
+            <div style={{ fontSize:window.innerWidth <= 290 ? "16px": "21px", fontFamily: "Poppins" }}>
               inflation
             </div>
             <div
               style={{
-                fontSize: "21px",
+                fontSize: window.innerWidth <= 290 ? "16px":"21px",
                 fontFamily: "Avenir",
                 paddingTop: "20px",
                 paddingLeft: "20px",

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Header from "../../../components/layout/Header";
 import SearchField from "../../../components/layout/SearchField";
 import Footer from "../../../components/layout/Footer";
@@ -10,6 +10,21 @@ import { SlArrowLeft } from "react-icons/sl";
 
 const Transaction = () => {
   const { theme } = useContext(ThemeContext);
+  const [page, setPage] = useState(1)
+
+  const nextPageHandler = () =>{
+    setPage(page+1)
+    console.log('moving to ', page)
+  }
+
+  const prevPageHandler = () =>{
+    if(page === 1){
+      alert ('you r on starting page')
+    }else{
+      setPage(page - 1) 
+      
+    }
+  }
   return (
     <div className="container-sm ">
       <Header />
@@ -22,7 +37,7 @@ const Transaction = () => {
       >
         <h4
           style={{
-            // color: theme === "light" ? "rgba(0.0.51,1)" : "rgba(255,255,255,1)",
+            
             fontFamily: "Poppins",
             fontSize: "24px",
           }}
@@ -131,6 +146,7 @@ const Transaction = () => {
                   borderRadius: "5px",
                   padding: "5px",
                 }}
+                onClick={prevPageHandler}
               >
                 <SlArrowLeft style={{ color: "rgba(127,127,152,1)" }} />
               </div>
@@ -147,7 +163,7 @@ const Transaction = () => {
                   padding: "5px",
                 }}
               >
-                Page 1 of 10000
+                Page {page} of 10000
               </div>
               <div
                 style={{
@@ -162,6 +178,7 @@ const Transaction = () => {
                       ? "1px solid rgb(226, 226, 226)"
                       : "1px solid rgba(22,22,63,1)",
                 }}
+                onClick={nextPageHandler}
               >
                 <SlArrowRight
                   style={{ color: theme === "light" ? "white" : "black" }}

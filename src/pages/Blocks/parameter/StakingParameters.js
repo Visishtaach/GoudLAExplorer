@@ -28,12 +28,12 @@ const StakingParameters = () => {
             whiteSpace:'nowrap'
           }}
         >
-          <div style={{ fontSize: "21px", fontFamily: "Poppins" }}>
+          <div style={{ fontSize: window.innerWidth <= 290 ? "16px": "21px", fontFamily: "Poppins" }}>
             unbonding_time
           </div>
           <div
             style={{
-              fontSize: "21px",
+              fontSize:window.innerWidth <= 290 ? "16px": "21px",
               fontFamily: "Avenir",
               padding: "20px",
             }}
@@ -55,12 +55,12 @@ const StakingParameters = () => {
             flexDirection: "column",
           }}
         >
-          <div style={{ fontSize: "21px", fontFamily: "Poppins" }}>
+          <div style={{ fontSize: window.innerWidth <= 290 ? "16px":"21px", fontFamily: "Poppins" }}>
             max_validators
           </div>
           <div
             style={{
-              fontSize: "21px",
+              fontSize: window.innerWidth <= 290 ? "16px":"21px",
               fontFamily: "Avenir",
               padding: "20px",
             }}
@@ -82,12 +82,12 @@ const StakingParameters = () => {
             flexDirection: "column",
           }}
         >
-          <div style={{ fontSize: "21px", fontFamily: "Poppins" }}>
+          <div style={{ fontSize:window.innerWidth <= 290 ? "16px": "21px", fontFamily: "Poppins" }}>
             max_entries
           </div>
           <div
             style={{
-              fontSize: "21px",
+              fontSize: window.innerWidth <= 290 ? "16px":"21px",
               fontFamily: "Avenir",
               paddingTop: "20px",
               paddingLeft: "20px",
@@ -110,12 +110,12 @@ const StakingParameters = () => {
             flexDirection: "column",
           }}
         >
-          <div style={{ fontSize: "21px", fontFamily: "Poppins" }}>
+          <div style={{ fontSize:window.innerWidth <= 290 ? "16px": "21px", fontFamily: "Poppins" }}>
             historical_entries
           </div>
           <div
             style={{
-              fontSize: "21px",
+              fontSize:window.innerWidth <= 290 ? "16px": "21px",
               fontFamily: "Avenir",
               paddingTop: "20px",
               paddingLeft: "20px",
@@ -144,7 +144,7 @@ const StakingParameters = () => {
         >
           <div
             style={{
-              fontSize: "21px",
+              fontSize: window.innerWidth <= 290 ? "16px":"21px",
               fontFamily: "Poppins",
               textOverflow: "ellipsis",
               overflow: "hidden",
@@ -154,7 +154,7 @@ const StakingParameters = () => {
           </div>
           <div
             style={{
-              fontSize: "21px",
+              fontSize:window.innerWidth <= 290 ? "16px": "21px",
               fontFamily: "Poppins",
               paddingTop: "20px",
               paddingLeft: "20px",

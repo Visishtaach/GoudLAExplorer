@@ -22,13 +22,13 @@ const SlashingParameters = () => {
           overflow:'hidden'
         }}
       >
-        <div style={{ fontSize: "21px", fontFamily: "Poppins",overflow: "hidden",
+        <div style={{ fontSize: window.innerWidth <= 290 ? "16px":"21px", fontFamily: "Poppins",overflow: "hidden",
       textOverflow: "ellipsis", }}>
           signed_blocks_window
         </div>
         <div
           style={{
-            fontSize: "21px",
+            fontSize: window.innerWidth <= 290 ? "16px":"21px",
             fontFamily: "Avenir",
             padding: "20px",
           }}
@@ -47,16 +47,17 @@ const SlashingParameters = () => {
           justifyContent: "start",
           alignItems: "start",
           flexDirection: "column",
-          overflow:'hidden'
+          overflow:'hidden',
+          
         }}
       >
-        <div style={{ fontSize: "21px", fontFamily: "Poppins",overflow: "hidden",
+        <div style={{ fontSize: window.innerWidth <= 290 ? "16px":"21px", fontFamily: "Poppins",overflow: "hidden",
       textOverflow: "ellipsis", }}>
           min_signed_per_window
         </div>
         <div
           style={{
-            fontSize: "21px",
+            fontSize:window.innerWidth <= 290 ? "16px": "21px",
             fontFamily: "Avenir",
             padding: "20px",
           }}
@@ -78,13 +79,13 @@ const SlashingParameters = () => {
           overflow:'hidden'
         }}
       >
-        <div style={{ fontSize: "21px", fontFamily: "Poppins",overflow: "hidden",
+        <div style={{ fontSize: window.innerWidth <= 290 ? "16px":"21px", fontFamily: "Poppins",overflow: "hidden",
       textOverflow: "ellipsis", }}>
           downtime_jail_duration
         </div>
         <div
           style={{
-            fontSize: "21px",
+            fontSize: window.innerWidth <= 290 ? "16px":"21px",
             fontFamily: "Avenir",
             paddingTop: "20px",
             paddingLeft: "20px",
@@ -110,13 +111,13 @@ const SlashingParameters = () => {
           overflow:'hidden'
         }}
       >
-        <div style={{ fontSize: "21px", fontFamily: "Poppins",overflow: "hidden",
+        <div style={{ fontSize:window.innerWidth <= 290 ? "16px": "21px", fontFamily: "Poppins",overflow: "hidden",
       textOverflow: "ellipsis", }}>
           slash_Fraction_double_sign
         </div>
         <div
           style={{
-            fontSize: "21px",
+            fontSize: window.innerWidth <= 290 ? "16px":"21px",
             fontFamily: "Avenir",
             paddingTop: "20px",
             paddingLeft: "20px",
@@ -139,13 +140,13 @@ const SlashingParameters = () => {
           overflow:'hidden'
         }}
       >
-        <div style={{ fontSize: "21px", fontFamily: "Poppins",overflow: "hidden",
+        <div style={{ fontSize: window.innerWidth <= 290 ? "16px":"21px", fontFamily: "Poppins",overflow: "hidden",
       textOverflow: "ellipsis", }}>
           slash_fraction_downtime
         </div>
         <div
           style={{
-            fontSize: "21px",
+            fontSize: window.innerWidth <= 290 ? "16px":"21px",
             fontFamily: "Avenir",
             padding: "20px",
           }}
