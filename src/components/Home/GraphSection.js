@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { ThemeContext } from "../../themecontext/ThemeContext";
 import LineChart from "./LineChart";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import websiteIcon from "../../assets/Website.svg";
 import twitterIcon from "../../assets/Twitter.svg";
 import discordIcon from "../../assets/disord.svg";
@@ -12,6 +12,8 @@ import websiteBlue from "../../assets/Websiteblue.svg";
 
 const GraphSection = () => {
   const { theme } = useContext(ThemeContext);
+  
+  const navigate = useNavigate();
   const [website, setWebsite] = useState(true);
   const [telegram, setTelegram] = useState(false);
   const [twitter, setTwitter] = useState(false);
@@ -66,6 +68,7 @@ const GraphSection = () => {
     setGithub(false);
     setTelegram(false);
     setTwitter(false);
+    navigate('/')
   };
 
   const twitterOpenHandler = () => {
@@ -75,6 +78,7 @@ const GraphSection = () => {
     setTelegram(false);
     setTwitter(true);
     setWebsite(false);
+    window.open("https://twitter.com/i/flow/login", "_blank");
   };
 
   const telegramOpenHandler = () => {
@@ -84,6 +88,7 @@ const GraphSection = () => {
     setTelegram(true);
     setTwitter(false);
     setWebsite(false);
+    window.open("https://web.telegram.org/k/", "_blank");
   };
   const discordOpenHandler = () => {
     setBlock(false);
@@ -92,6 +97,7 @@ const GraphSection = () => {
     setTelegram(false);
     setTwitter(false);
     setWebsite(false);
+    window.open("https://discord.com/", "_blank");
   };
 
   const githubOpenHandler = () => {
@@ -101,6 +107,7 @@ const GraphSection = () => {
     setTelegram(false);
     setTwitter(false);
     setWebsite(false);
+    window.open("https://github.com/", "_blank");
   };
   const blockOpenHandler = () => {
     setBlock(true);

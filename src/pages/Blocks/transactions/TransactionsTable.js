@@ -124,9 +124,9 @@ const TransactionsTable = ({ activeNodes }) => {
           </tr>
         </thead>
         <tbody>
-          {activeNodes.map((node) => (
+          {activeNodes.map((node,index) => (
             <tr
-              key={node.id}
+              key={index}
               style={{
                 color: theme === "light" ? "black" : "rgba(225,225,225,1)",
               }}

@@ -15,7 +15,7 @@ const Details = () => {
   const getHeight = async() =>{
     const res = await fetch(`http://3.95.171.204:1317//cosmos/base/tendermint/v1beta1/blocks/latest`)
     const data = await res.json()
-    console.log('data', data.block.header.height)
+    console.log('data', data)
     if(data){
       setHeight( data.block.header.height)
     }
@@ -31,7 +31,7 @@ const  getCommunityPoolData = async()=>{
     getHeight()
     getCommunityPoolData()
   
-  },[])
+  },[height])
   return (
     <>
       <div
