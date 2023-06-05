@@ -12,6 +12,7 @@ import news from "../../assets/announcement.png";
 import newsLogo from "../../assets/news.png";
 import views from "../../assets/views.png";
 import bg from "../../assets/bg.png";
+import ta from "../../assets/ta22.png";
 
 import Details from "./Details";
 import GraphSection from "./GraphSection";
@@ -41,19 +42,30 @@ const Main = () => {
 
   return (
     <>
-      <div 
+      <div
         style={{
-          height: "402px",
-          paddingTop: "100px",
-          paddingBottom: "0",
-          backgroundImage: `url(${bg})`,
+          //  height: "402px",
+          paddingTop: "20px",
+          // paddingBottom: "0",
+          // backgroundImage: `url(${bg})`,
         }}
       >
-        <div style={{ margin: "20px" }}>
-          <div className="container">
+        <div className="h-50" style={{overflowX:"hidden"}}>
+          <video
+            // src={}
+            autoplay="true"
+            loop
+            muted="true"
+            // controls
+            style={{} }
+          >
+            <source src={require("../../assets/video.mp4")} />
+          </video>
+
+          <div className="container test" style={{}}>
             <div className="col-lg-12 w-100">
-              <div className="row" style={{ gap: "20px" }}>
-                <div className="col-lg-5 mb-1">
+              <div className="row" style={{width:"100%"}}>
+                <div className="col-lg-4 mb-1">
                   <div className="d-flex">
                     <div className="w-100">
                       <h5
@@ -64,7 +76,7 @@ const Main = () => {
                           marginTop: "45px",
                         }}
                       >
-                        GoudLA Explorer
+                        GoudLA Space
                       </h5>
                       <InputGroup
                         className="mb-2"
@@ -82,14 +94,15 @@ const Main = () => {
                           style={{
                             backgroundColor: "black",
                             border: "none",
-                            padding: "12px 6px",
-                            margin: 0,
+                            padding: "12px 20px",
+
                             fontSize: "12px",
                             fontFamily: "Poppins",
                             height: "53px",
                             color: "#B6B6B6",
                             borderTopLeftRadius: "15px",
-                            borderBottomLeftRadius:'15px'
+                            borderBottomLeftRadius: "15px",
+                            // textAlign:'center'
                           }}
                         />
                         <InputGroup.Text
@@ -98,11 +111,13 @@ const Main = () => {
                             border: "none",
                             borderLeft: "none",
                             borderColor:
-                              theme === "dark" ? "rgba(128,99,172,1)" : "#B233F7",
+                              theme === "dark"
+                                ? "rgba(128,99,172,1)"
+                                : "#B233F7",
                             backgroundColor: "black",
                             margin: 0,
                             borderTopRightRadius: "15px",
-                            borderBottomRightRadius:'15px'
+                            borderBottomRightRadius: "15px",
                           }}
                         >
                           <BsSearch
@@ -111,6 +126,7 @@ const Main = () => {
                               margin: 0,
                               color: "rgba(74,164,220,1)",
                               fontSize: "16px",
+                              marginRight: "8px",
                             }}
                           />
                         </InputGroup.Text>
@@ -120,200 +136,42 @@ const Main = () => {
                 </div>
 
                 <div
-                  className="col-lg-3  mb-1"
+                  className="Bimg col-lg-4"
                   style={{
-                    height: "auto",
-                    backgroundColor: "rgba(74,164,220,1)",
+                    height: "170px",
+                    // backgroundColor: "rgba(74,164,220,1)",
                     borderRadius: "20px",
-                    width: window.innerWidth > 990 ? "360px" : "60%",
+                    // width: window.innerWidth > 990 ? "70%" : "60%",
+                    backgroundImage: `url(${ta})`,
+                    backgroundRepeat: "no-repeat",
+                    // marginLeft:"10px"
+                    // width:"100%"
+
                   }}
-                >
-                  <Row className="mt-1 justify-content-between">
-                    <Col xs={12} sm={7}>
-                      <div className="d-flex align-items-start justify-content-between">
-                        <img src={news} alt="Big news" />
-                        <div
-                          className="d-flex text-left align-items-center justify-content-start"
-                          style={{
-                            whiteSpace: "nowrap",
-                            fontSize: "14px",
-                            fontFamily: "Poppins",
-                            color: "rgba(37,64,110,1)",
-                            padding: "2px",
-                            marginLeft: "0px",
-                          }}
-                        >
-                          GoudLA Announcement
-                        </div>
-                      </div>
-                    </Col>
-
-                    <Col xs={12} sm={4}>
-                      <div
-                        className="d-flex align-items-center justify-content-end text-right"
-                        style={{
-                          fontSize: "12px",
-                          fontFamily: "Poppins",
-                          color: "rgba(37,64,110,1)",
-                          padding: "2px",
-                        }}
-                      >
-                        More <AiOutlineRight />
-                      </div>
-                    </Col>
-                  </Row>
-                  <Row className="mt-1 mb-1">
-                    <Col sm={4}>
-                      <div className="d-flex align-items-center justify-content-between">
-                        <img
-                          src={newsLogo}
-                          alt="logo"
-                          style={{ width: "94px", height: "93px" }}
-                        />
-                      </div>
-                    </Col>
-                    <Col sm={8}>
-                      <Row>
-                        <Col>
-                          <div
-                            className="mb-1  justify-content-end"
-                            style={{
-                              color: "rgba(255,255,255,1)",
-                              fontFamily: "Poppins",
-                              fontSize: "14px",
-                              textAlign: "left",
-                              //  marginLeft: "2.25rem",
-                            }}
-                          >
-                            Introduction to GoudLA Wallet
-                          </div>
-                        </Col>
-                      </Row>
-                      <Row>
-                        <Col>
-                          <div className="mb-1">
-                            <p
-                              style={{
-                                fontSize: "10px",
-                                color: "rgba(255,255,255,1)",
-                                fontFamily: "Poppins",
-                                lineHeight: "1.1",
-                                textAlign: "left",
-                              }}
-                            >
-                              This week we will remember not only AMA - session
-                              on GoudLA Wallet, which is planned on 12.05.23.
-                            </p>
-                          </div>
-                        </Col>
-                      </Row>
-                      <Row>
-                        <Col
-                          xs={6}
-                          sm={3}
-                          className="d-flex align-items-center justify-content-between p-1"
-                        >
-                          <div
-                            style={{ fontSize: "8px", gap: "2px" }}
-                            className="d-flex"
-                          >
-                            {formattedDate}
-                            <RxDotFilled style={{ fontSize: "10px" }} />
-                          </div>
-                        </Col>
-                        <Col
-                          xs={6}
-                          sm={3}
-                          className="d-flex align-items-center justify-content-between "
-                        >
-                          {/* <RxDotFilled style={{ fontSize: "10px" }} /> */}
-                          <div
-                            style={{
-                              fontSize: "10px",
-                              gap: "3px",
-                            }}
-                            className="d-flex align-items-center"
-                          >
-                            <img
-                              src={views}
-                              alt="seen by"
-                              style={{
-                                width: "10px",
-                                height: "8px",
-                                fontFamily: "Avenir",
-                              }}
-                            />
-
-                            {seen}
-                            <RxDotFilled style={{ fontSize: "8px" }} />
-                          </div>
-                        </Col>
-                        <Col
-                          xs={6}
-                          sm={3}
-                          className="d-flex align-items-center justify-content-between"
-                        >
-                          <div
-                            style={{
-                              fontSize: "10px",
-                              fontFamily: "Avenir",
-                              gap: "2px",
-                            }}
-                            className="d-flex "
-                          >
-                            <RxHeartFilled style={{ fontSize: "10px" }} />
-                            <span>{fav}</span>
-
-                            <RxDotFilled style={{ fontSize: "10px" }} />
-                          </div>
-                          <div></div>
-                        </Col>
-                        <Col
-                          xs={6}
-                          sm={3}
-                          className="d-flex align-items-center justify-content-center"
-                        >
-                          <div>
-                            <span
-                              style={{
-                                fontSize: "8px",
-                                color: "rgba(74,164,220,1)",
-                                backgroundColor: "rgba(37, 64, 110, 1)",
-                                padding: "2px",
-                                borderRadius: "4px",
-                              }}
-                            >
-                              GOUD
-                            </span>
-                          </div>
-                        </Col>
-                      </Row>
-                    </Col>
-                  </Row>
-                </div>
+                ></div>
 
                 <div
-                  className="col-lg-3"
+                  className="col-lg-4 Bimg"
                   style={{
-                    //  width: "393px",
-                    height: "145px",
-
+                    height: "175px",
                     backgroundImage: `url(${th})`,
                     backgroundRepeat: "no-repeat",
                     borderRadius: "20px",
+                    // marginLeft: "20px",
+                    // width:"100%"
                   }}
                 ></div>
               </div>
             </div>
           </div>
-
-          <Details />
-          {/* <DetailsList /> */}
-          <GraphSection />
-          <Lists />
-          <WalletAssets />
-          <Footer />
         </div>
+
+        <Details />
+        {/* <DetailsList /> */}
+        <GraphSection />
+        <Lists />
+        <WalletAssets />
+        <Footer />
       </div>
     </>
   );

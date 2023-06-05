@@ -13,6 +13,7 @@ import { FiSun, FiMoon } from "react-icons/fi";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import arrow2 from "../../assets/arrow2.svg";
 import arrow from "../../assets/Dropdowngrey.svg";
+import Menu from "../../assets/Menu.svg";
 
 const Header = () => {
   const { theme, toggleTheme, themeConfig } = useContext(ThemeContext);
@@ -52,8 +53,10 @@ const Header = () => {
   };
   const toggleButtonStyle = {
     color: theme === "light" ? "black" : "white",
-    backgroundColor: theme === "light" ? "white" : "#E5E4E2",
-    borderColor: theme === "light" ? "black" : "white",
+    backgroundColor: theme === "light" ? "white" : "rgba(0,0,21)",
+    // borderColor: theme === "light" ? "black" : "white",
+    border:"none",
+    //  backgroundImage: `url(${Menu})`
   };
 
   const homeTitle = isActiveLink("/") && theme === "dark" ? "white" : "#595968";
@@ -85,15 +88,63 @@ const Header = () => {
                 />
               </Navbar.Brand>
               <Navbar.Toggle
-                aria-controls={`offcanvasNavbar-expand-${expand}`}
+                //  aria-controls={`offcanvasNavbar-expand-${expand}`}
                 style={toggleButtonStyle}
-              />
+            
+                id="hello"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28.372"
+                  height="28.28"
+                  viewBox="0 0 48.372 38.28"
+                >
+                  <g
+                    id="Group_708"
+                    data-name="Group 708"
+                    transform="translate(-13747.506 683.587)"
+                  >
+                    <path
+                      id="Path_259"
+                      data-name="Path 259"
+                      d="M185.574,118.994c-7.415-1-15.187-.713-22.673-.428a199.093,199.093,0,0,0-22.53,2.21c-2.21.357-1.711,4.207.57,3.993,7.273-.784,14.616-1.284,21.96-1.426,7.344-.214,14.688.5,22.032.428,2.638,0,3.422-4.349.641-4.777Z"
+                      transform="translate(13608.558 -801.884)"
+                      fill="#b233f7"
+                    ></path>
+                    <path
+                      id="Path_260"
+                      data-name="Path 260"
+                      d="M185.574,256.224c-7.415-1-15.187-.713-22.673-.428a199.089,199.089,0,0,0-22.53,2.21c-2.21.357-1.711,4.207.57,3.993,7.273-.784,14.616-1.284,21.96-1.426s14.688.5,22.031.5c2.638-.072,3.422-4.492.642-4.849Z"
+                      transform="translate(13608.558 -923.214)"
+                      fill="#b233f7"
+                    ></path>
+                    <path
+                      id="Path_261"
+                      data-name="Path 261"
+                      d="M185.574,393.454c-7.415-1-15.187-.713-22.673-.428a199.082,199.082,0,0,0-22.53,2.21c-2.21.357-1.711,4.207.57,3.993,7.273-.784,14.616-1.284,21.96-1.426s14.688.5,22.031.5c2.638-.143,3.422-4.492.642-4.849Z"
+                      transform="translate(13608.558 -1044.545)"
+                      fill="#b233f7"
+                    ></path>
+                  </g>
+                </svg>
+              </Navbar.Toggle>
               <Navbar.Offcanvas
                 id={`offcanvasNavbar-expand-${expand}`}
                 aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
-                placement="end"
+                // placement="end"
+                style={{
+                  backgroundColor:
+                    theme === "light" ? "white" : "rgba(0,0,51,1)",
+                }}
               >
-                <Offcanvas.Header closeButton>
+                <Offcanvas.Header
+                  closeButton
+                  style={{
+                    backgroundColor:
+                      theme === "light" ? "white" : "rgba(0,0,51,1)",
+                    color: theme === "light" ? "black" : "white",
+                  }}
+                >
                   <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
                     GoudLA
                   </Offcanvas.Title>

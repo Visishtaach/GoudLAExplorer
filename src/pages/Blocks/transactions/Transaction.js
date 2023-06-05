@@ -16,15 +16,15 @@ const Transaction = () => {
   const { theme } = useContext(ThemeContext);
   const [page, setPage] = useState(1)
 
-  // const getTxn = async() =>{
-  //   const res = await fetch('http://3.95.171.204:1317//cosmos/staking/v1beta1/pool')
-  //   const data = await res.json()
-  //   console.log(data)
-  // }
+  const getTxn = async() =>{
+    const res = await fetch('http://3.95.171.204:1317//cosmos/tx/v1beta1/txs')
+    const data = await res.json()
+    console.log(data)
+  }
 
-  // useEffect(()=>{
-  //     getTxn()
-  // },[])
+  useEffect(()=>{
+      getTxn()
+  },[])
 
 
   const nextPageHandler = () =>{

@@ -1,0 +1,29 @@
+/* .activeLink:hover{
+    background-color: rgba(48,197,244,1);
+    will-change: transform;
+    transform: translate3d(-0.003px, -0.0021px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+    scale:calc(1.2)
+} */
+.activeLink:hover {
+    /* background-color: rgba(48, 197, 244, 1); */
+    will-change: transform;
+    transform: translate3d(-0.003px, -0.0021px, 0px) scale3d(1.2, 1.2, 1.2) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+}
+.activeLink:hover span{
+    will-change: transform;
+    transform: translate3d(-0.003px, -0.0021px, 0px) scale3d(1.2, 1.2, 1.2) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+}
+.activeLink:hover  img {
+    filter: brightness(0) invert(1);
+  }
+
+
+
+  /* @media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  } */

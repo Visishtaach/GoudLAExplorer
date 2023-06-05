@@ -73,7 +73,7 @@ const Lists = () => {
   ];
 
   const style1 = {
-    fontSize: window.innerWidth <= 290 ? "14px": "17px",
+    fontSize: window.innerWidth <= 500 ? "10px": "17px",
     textDecoration: "none",
     backgroundColor: "rgba(127,127,152,1)",
     width: "auto",
@@ -81,9 +81,10 @@ const Lists = () => {
     color: "rgba(255,255,255,1)",
     borderRadius: "10px",
     padding: window.innerWidth <=290 ? "5px 10px 5px": "10px 30px 10px",
+    
   };
   const style2 = {
-    fontSize:window.innerWidth <= 290 ? "14px": "17px",
+    fontSize:window.innerWidth <= 500 ? "10px": "17px",
     textDecoration: "none",
     width: "auto",
     height: "auto",
@@ -140,7 +141,7 @@ const Lists = () => {
           </NavLink>
           </div>
         </div>
-        <Row lg={12} m={5}>
+        <Row lg={12} m={5} >
           <Col>
             <Table responsive>
               <tbody>
@@ -162,6 +163,7 @@ const Lists = () => {
                           fontWeight: "bold",
                           borderRadius: "10px",
                           boxShadow: "0 2px 4px rgba(0, 0, 0, 0.6)",
+                          fontSize:window.innerWidth <=500 ? "12px" : '16px'
                         }}
                       >
                         {item.id}
@@ -175,7 +177,7 @@ const Lists = () => {
                             theme === "light"
                               ? "rgba(0,0,21,1)"
                               : "rgba(255,255,255,1)",
-                          fontSize: "19px",
+                          fontSize: window.innerWidth <= 500 ?"12px" :"19px",
                           fontFamily: "Poppins",
                           // backgroundColor:'red',
                         }}
@@ -184,7 +186,7 @@ const Lists = () => {
                         <span
                           style={{
                             color: "rgba(48,197,244,1)",
-                            fontSize: "13px",
+                            fontSize: window.innerWidth <=500 ? "8px" : "13px",
                             fontFamily: "Poppins",
                           }}
                         >
@@ -223,7 +225,7 @@ const Lists = () => {
                           border: "none",
                           width: "84px",
                           height: "46px",
-                          fontSize: "21px",
+                          fontSize: window.innerWidth <=500 ? "14px" : "21px",
                         }}
                       >
                         Vote

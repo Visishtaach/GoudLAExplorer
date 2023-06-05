@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
-import fire from "../../assets/Group_223.png";
-import profit from "../../assets/Group_221.png";
-import cap from "../../assets/Icons/cap.svg";
-import price from "../../assets/Icons/price.svg";
+import fire from "../../assets/Icons/fireee.png";
+import profit from "../../assets/Icons/hand.png";
+import cap from "../../assets/Icons/globee.png";
+import price from "../../assets/Icons/c.png";
 import { ThemeContext } from "../../themecontext/ThemeContext";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -37,7 +37,7 @@ const  getCommunityPoolData = async()=>{
       <div
         className="container mt-4"
         style={{
-          padding: "20px",
+          // paddingTop: "-90px",
           backgroundColor: theme === "light" ? "white" : "rgb(0, 0, 51)",
           borderRadius: "15px",
           color: theme === "light" ? "black" : "white",
@@ -51,6 +51,7 @@ const  getCommunityPoolData = async()=>{
         <Row>
           <Col
             sm={3}
+
             style={{
               borderRight:
                 window.innerWidth > 1000 && theme === "light"
@@ -70,6 +71,7 @@ const  getCommunityPoolData = async()=>{
                 display: "flex",
                 flexDirection: "row",
                 alignItems: "center",
+                justifyContent:"center",
                 gap: "8px",
               }}
             >
@@ -117,7 +119,7 @@ const  getCommunityPoolData = async()=>{
                     {" "}
                     @0.1661821
                   </span>{" "}
-                  <span
+                  <div
                     style={{
                       fontFamily: "Poppins",
                       fontSize: "14px",
@@ -125,7 +127,7 @@ const  getCommunityPoolData = async()=>{
                     }}
                   >
                     Goud
-                  </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -150,6 +152,7 @@ const  getCommunityPoolData = async()=>{
                 display: "flex",
                 flexDirection: "row",
                 alignItems: "center",
+                justifyContent:"center"
               }}
             >
               <div>
@@ -212,13 +215,16 @@ const  getCommunityPoolData = async()=>{
                   ? "2px solid rgba(235,235,235,1)"
                   : "1px solid rgba(22,22,63,1)",
               paddingTop: "20px",
+            
             }}
           >
             <div
               style={{
                 display: "flex",
                 flexDirection: "row",
-                alignItems: "center",
+                alignItems: "start",
+                // justifyContent:"center"
+             
               }}
             >
               <div>
@@ -228,6 +234,7 @@ const  getCommunityPoolData = async()=>{
                     fontFamily: "Poppins",
                     fontSize: "16px",
                     color: "rgba(127,127,152,1)",
+                  paddingLeft: window.innerWidth <=600? "92px":'22px'
                   }}
                 >
                   Bonded{" "}
@@ -242,9 +249,7 @@ const  getCommunityPoolData = async()=>{
                             : "rgba(225,225,225,1)",
                       }}
                     >
-                      3Gwei
-                    </div>{" "}
-                    <div
+                      3Gwei <span
                       style={{
                         fontFamily: "Avenir",
                         fontSize: "16px",
@@ -252,7 +257,9 @@ const  getCommunityPoolData = async()=>{
                       }}
                     >
                       ($0.02)
-                    </div>
+                    </span>
+                    </div>{" "}
+                    
                   </div>
                 </div>
               </div>
@@ -271,12 +278,14 @@ const  getCommunityPoolData = async()=>{
                   ? "2px solid rgba(235,235,235,1)"
                   : "1px solid rgba(22,22,63,1)",
               paddingTop: "20px",
+              
             }}
           >
             <div
               style={{
                 display: "flex",
                 flexDirection: "row",
+                justifyContent:"center"
               }}
             >
               <div>
@@ -329,7 +338,7 @@ const  getCommunityPoolData = async()=>{
                   ? "2px solid rgba(235,235,235,1)"
                   : "1px solid rgba(22,22,63,1)",
 
-              padding: "20px",
+              padding: "20px 40px",
             }}
           >
             <div
@@ -337,7 +346,9 @@ const  getCommunityPoolData = async()=>{
                 display: "flex",
                 flexDirection: "row",
                 alignItems: "center",
+            justifyContent:'center',
                 gap: "8px",
+              
               }}
             >
               <img
@@ -407,6 +418,7 @@ const  getCommunityPoolData = async()=>{
                 display: "flex",
                 flexDirection: "row",
                 alignItems: "center",
+                justifyContent:"center",
                 gap: "8px",
               }}
             >
@@ -474,7 +486,7 @@ const  getCommunityPoolData = async()=>{
               style={{
                 display: "flex",
                 flexDirection: "row",
-
+                justifyContent:"center",
                 gap: "3px",
 
                 marginLeft:
@@ -540,6 +552,7 @@ const  getCommunityPoolData = async()=>{
                 display: "flex",
                 flexDirection: "row",
                 alignItems: "center",
+                justifyContent:'center',
                 gap: "3px",
                 //  textAlign: "center",
                 // justifyContent:'center',
@@ -578,7 +591,7 @@ const  getCommunityPoolData = async()=>{
                       color: "rgba(127,127,152,1)",
                     }}
                   >
-                    Goud
+                  {" "}  Goud
                   </span>
                 </div>
               </div>
@@ -600,7 +613,7 @@ const  getCommunityPoolData = async()=>{
               style={{
                 display: "flex",
                 flexDirection: "row",
-
+                justifyContent:"center",
                 alignItems: "center",
                 gap: "3px",
               }}
@@ -634,13 +647,14 @@ const  getCommunityPoolData = async()=>{
               </div>
             </div>
           </Col>
-          <Col sm={12} md={3} style={{ padding: "20px" }}>
+          <Col sm={12} md={3} style={{ padding: "20px " }}>
             {" "}
             <div
               style={{
                 display: "flex",
                 flexDirection: "row",
                 alignItems: "center",
+                justifyContent:"center",
                 gap: "8px",
               }}
             >
